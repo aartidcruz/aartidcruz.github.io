@@ -1,0 +1,36 @@
+.bg-lt-blue
+  background-color #dff2f7
+  clear both
+  
+.table
+  display table 
+  
+.table-cell
+  display table-cell
+  vertical-align middle
+  
+.left,
+.right 
+  position absolute
+  top 0
+  bottom 0
+  width 50%
+  height 100%
+  &:before,
+  &:after
+    content " " // 1
+    display table // 2
+
+  &:after
+    clear both
+    
+  @media screen and (max-width: 768px)
+    float none 
+    width 100%
+    
+.left 
+  left 0px
+  background-color #f99678
+    
+.right 
+  right 0px
