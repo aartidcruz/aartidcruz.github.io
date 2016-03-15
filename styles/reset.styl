@@ -1,6 +1,5 @@
 html,
 body
-  max-height 100%
   height 100%
   
 body
@@ -13,9 +12,40 @@ body
   color #515151
   font-weight normal
   text-align center
-  overflow hidden
   &.loaded
     overflow-y: auto
+    
+  .border-top,
+  .border-right,
+  .border-left,
+  .border-bottom
+    position fixed 
+    background-color white
+    z-index 10
+    
+  .border-top
+    left 0
+    right 0
+    top 0
+    height 10px 
+    
+  .border-right
+    right 0
+    bottom 0
+    width 10px 
+    top 0
+  
+  .border-left
+    left 0
+    width 10px 
+    bottom 0
+    top 0
+    
+  .border-bottom
+    bottom 0
+    left 0
+    right 0
+    height 10px 
     
 .section
   height 100%

@@ -6,6 +6,8 @@ window.addEventListener 'load', (->
 
 $(document).ready ->
 
+  # skrollr.init constants: box: '150p'
+
   window.setTimeout (->
     @$(".intro-text").addClass("fill-up")
   ), 1200
@@ -26,4 +28,5 @@ $(document).ready ->
     items: 1
     animateOut: 'fadeOut'
     nav: true
+
 

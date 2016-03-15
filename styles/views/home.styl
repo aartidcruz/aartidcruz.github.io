@@ -6,11 +6,22 @@
   background-repeat no-repeat 
   background-size cover
   background-position left center
-  height 100%
   width 100%
+  min-height 800px
   color white
   position relative
   display table
+  &:after 
+    content ''
+    height 100px 
+    z-index -1
+    background-color #2C3A48
+    position absolute
+    bottom -70px
+    right -10px
+    left -10px
+    transform rotate(3deg)
+        
   .intro-text
     display table-cell
     vertical-align middle
@@ -18,8 +29,6 @@
     position relative
     pointer-events none
 
-.scroll-to 
-  position relative
 
 .right
   img 
@@ -45,7 +54,7 @@
 .rocket
   width 30%
   max-width 230px
-  z-index: 1
+  z-index  1
   transition(all 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000))
   transition-timing-function(cubic-bezier(0.645, 0.045, 0.355, 1.000))
     
@@ -55,42 +64,13 @@
   min-width 230px
   transition(all 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000))
   transition-timing-function(cubic-bezier(0.645, 0.045, 0.355, 1.000))
-  
-.go-down
-  cursor pointer
-  border-radius 50%
-  background transparentify(white, 0.2)
-  width 5em
-  height 5em 
-  border 0.1em solid white 
-  position absolute
-  bottom 2em
-  left 50%
-  transform translate(-50%, 0)
-  transition(all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000))
-  animation(bouncy 1200ms infinite)
-  
-  &:before 
-    content ''
-    position relative
-    border-style solid
-    border-width 0.1em 0.1em 0 0
-    display inline-block
-    height 1.45em
-    width 1.45em
-    top 1.25em
-    left 0.15em
-    transform(rotate(-45deg))
-    vertical-align top
-    transform(rotate(135deg))
-    
 
-@keyframes bouncy
-  0%
-    transform(translate(-50%, 0))
-  30% 
-    transform(translate(-50%, 10px))
-  100% 
-    transform(translate(-50%, 0))
+.section-scroll
+  position fixed
+  top 0
+  left 0
+  width 100%
+  height 100%
 
-
+.section-scrollnth-child(2) 
+  overflow hidden
