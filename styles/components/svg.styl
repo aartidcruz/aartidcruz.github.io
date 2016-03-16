@@ -1,9 +1,9 @@
 // Name SVG
 
-#name 
+#name
   width 20em
-  margin 0 auto 
-  
+  margin 0 auto
+
 .letter
   fill transparent
   stroke #FFFFFF
@@ -12,7 +12,7 @@
   stroke-dasharray 1000
   stroke-dashoffset 1000
   transition(900ms)
-  
+
   // &.stroke-up
   animation(dash 6s linear forwards)
 
@@ -21,15 +21,15 @@
     .letter
       fill white
       stroke-width 0
-  
+
 for i in (1..11)
   .letter:nth-of-type({i})
     animation-delay((i*60)ms)
-    
-@keyframes dash 
-  from 
+
+@keyframes dash
+  from
     stroke-dashoffset 1000
-  
-  to 
+
+  to
     stroke-dashoffset 0
-  
+
