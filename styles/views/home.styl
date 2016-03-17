@@ -3,7 +3,7 @@
 
 .bg-header
   background-image url("/assets/img/bg-header.png")
-  background-repeat no-repeat 
+  background-repeat no-repeat
   background-size cover
   background-position left center
   width 100%
@@ -11,9 +11,10 @@
   color white
   position relative
   display table
-  &:after 
+  margin-bottom 90px
+  &:after
     content ''
-    height 100px 
+    height 100px
     z-index -1
     background-color #2C3A48
     position absolute
@@ -21,7 +22,7 @@
     right -10px
     left -10px
     transform rotate(3deg)
-        
+
   .intro-text
     display table-cell
     vertical-align middle
@@ -31,7 +32,7 @@
 
 
 .right
-  img 
+  img
     max-width 170px
 
 .rocket-moon
@@ -39,25 +40,25 @@
   left 0
   bottom 0
   width 100%
-  
+
 .rocket,
 .moon
   position absolute
   left 0
-  
+
 .moon
   bottom -4em
-  
+
 .rocket
   bottom 13em
-  
+
 .rocket
   width 30%
   max-width 230px
   z-index  1
   transition(all 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000))
   transition-timing-function(cubic-bezier(0.645, 0.045, 0.355, 1.000))
-    
+
 .moon
   width 37%
   max-width 400px
@@ -72,5 +73,5 @@
   width 100%
   height 100%
 
-.section-scrollnth-child(2) 
+.section-scrollnth-child(2)
   overflow hidden
