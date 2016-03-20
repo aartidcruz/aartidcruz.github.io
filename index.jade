@@ -1,9 +1,10 @@
 .bg-header
   .intro-text.block-hor-lg
-    p.text-xl.block-ver-lg Hi, I'm
+    p.text-md.block-ver-lg Hi, I'm
     include templates/components/name
+    h1.hide Aarti D'Cruz, UI/UX Designer and Developer
 
-    p.text-md.block-ver-lg
+    p.text-md.block-ver-lg.subtitle
       | I'm a girl, who also
       br
       | happens to design and code.
@@ -38,8 +39,20 @@
             img(src="/assets/img/4.png")
             p User Experience
 
-.block-grey.section.block-ver-xl
-  .container
-    .row
+
+mixin work-tile(title, description, work_url, device)
+  .block-grey.section.block-ver-xl
+    .container:.row
       .col-sm-12
-        h1 HIIII
+        .device(class="#{device}")
+          img(src="/assets/img/work/#{work_url}")
+
+      .col-sm-12
+        h2.text-xxl=title
+        p=description
+
+
++work-tile("edapp.com", "lorem egnsjgds sdg sd", "edapp.jpg", "desktop")
+
++work-tile("Lamb Roast", "lorem egnsjgds sdg sd", "lambroast.png", "mobile")
+

@@ -24,9 +24,9 @@ $(document).ready ->
   $(window).scroll ->
     stickyNav()
 
-  $('#owl').owlCarousel
-    items: 1
-    animateOut: 'fadeOut'
-    nav: true
+  # $('#owl').owlCarousel
+  #   items: 1
+  #   animateOut: 'fadeOut'
+  #   nav: true
 
 
