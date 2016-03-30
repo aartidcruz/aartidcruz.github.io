@@ -1,0 +1,29 @@
+mixin work-tile(title, description, work_url, device, tag)
+  .container-fluid.section.border
+    .row.section
+      .col-xs-12.col-md-4.section
+        h2.text-xxl=title
+        p.text-left=description
+
+        if tag
+          h3.text-orange.amaranth=tag
+
+      .block-grey.col-xs-12.col-md-8.section
+        .device
+          img(src="/assets/img/#{device}.png" class="#{device}")
+          img.work(src="/assets/img/work/#{work_url}" class="work-#{device}")
+
+  //- .block-grey.section.block-ver-xl
+  //-   .container: .row
+  //-     .col-sm-12
+  //-       .device
+  //-         img(src="/assets/img/#{device}.png" class="#{device}")
+  //-         img.work(src="/assets/img/work/#{work_url}" class="work-#{device}")
+
+  //-     .col-sm-12
+  //-       h2.text-xxl=title
+  //-       p.text-left=description
+
+  //-     if tag
+  //-       .col-sm-12.text-left
+  //-         h3.text-orange.amaranth=tag

@@ -1,3 +1,5 @@
+include /templates/components/mixins
+
 .bg-header
   .intro-text.block-hor-lg
     p.text-md.block-ver-lg Hi, I'm
@@ -9,13 +11,15 @@
       br
       | happens to design and code.
 
+    img.me(src="/assets/img/me.png")
+
   .rocket-moon
     img.rocket(src="/assets/img/rocket.png")
     img.moon(src="/assets/img/moon.png")
 
 .about-me.section
-  .container
-    .row.center
+  .container.table
+    .row.table-cell
       .col-sm-12.block-lg.text-left
         h2.text-orange.text-xxl About me
 
@@ -39,20 +43,12 @@
             img(src="/assets/img/4.png")
             p User Experience
 
-
-mixin work-tile(title, description, work_url, device)
-  .block-grey.section.block-ver-xl
-    .container:.row
-      .col-sm-12
-        .device(class="#{device}")
-          img(src="/assets/img/work/#{work_url}")
-
-      .col-sm-12
-        h2.text-xxl=title
-        p=description
-
-
-+work-tile("edapp.com", "lorem egnsjgds sdg sd", "edapp.jpg", "desktop")
++work-tile(
+  "edapp.com",
+  "edapp.com is a website to promote Ed!. I was given the brief to improve user I designed and did the front end for",
+  "edapp.jpg",
+  "desktop",
+  "front-end")
 
 +work-tile("Lamb Roast", "lorem egnsjgds sdg sd", "lambroast.png", "mobile")
 
