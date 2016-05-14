@@ -6,8 +6,11 @@ $(document).ready ->
     slides = document.querySelectorAll('.panel')
     # create scene for every slide
     i = 0
-    while i < slides.length
+    while i < 2
       new (ScrollMagic.Scene)(triggerElement: slides[i]).setPin(slides[i]).addTo controller
-      new (ScrollMagic.Scene)(triggerElement: slides[i], offset: -400).setClassToggle(slides[i], "active").addTo controller2
       i++
+    a = 0
+    while a < slides.length
+      new (ScrollMagic.Scene)(triggerElement: slides[a], offset: -400).setClassToggle(slides[a], "active").addTo controller2
+      a++
     return
