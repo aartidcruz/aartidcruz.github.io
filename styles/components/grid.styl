@@ -20,6 +20,13 @@
   @media (min-width $screen-lg-min)
     width $container-lg
 
+.container-lg
+  @media (min-width $screen-sm-min)
+    width $container-sm
+  @media (min-width $screen-md-min)
+    width $container-md
+  @media (min-width $screen-lg-min)
+    width 1100px
 
 // Fluid container
 //
@@ -31,6 +38,9 @@
   @extend .clearfix
   box-sizing border-box
 
+.container-fluid
+  max-width 1400px
+  height 100%
 
 // Row
 //

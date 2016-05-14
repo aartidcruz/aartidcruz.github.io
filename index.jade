@@ -1,7 +1,7 @@
 include /templates/components/mixins
 
-.bg-header
-  .intro-text.block-hor-lg
+.bg-header.panel
+  .intro-text.block-hor-lg#scene-1
     p.text-md.block-ver-lg Hi, I'm
     include templates/components/name
     h1.hide Aarti D'Cruz, UI/UX Designer and Developer
@@ -13,15 +13,15 @@ include /templates/components/mixins
 
     img.me(src="/assets/img/me.png")
 
-  .rocket-moon
-    img.rocket(src="/assets/img/rocket.png")
-    img.moon(src="/assets/img/moon.png")
+  //- .rocket-moon
+  //-   img.rocket(src="/assets/img/rocket.png")
+  //-   img.moon(src="/assets/img/moon.png")
 
-.about-me.section
+.about-me.section#scene-2.panel
   .container.table
     .row.table-cell
       .col-sm-12.block-lg.text-left
-        h2.text-orange.text-xxl About me
+        h2.text-orange.text-xxl.title About me
 
         p.text-md
           | I’m a UI/UX designer and front end developer who lives in Sydney. With 2 years under my belt at&nbsp;
@@ -30,25 +30,26 @@ include /templates/components/mixins
 
 
         .text-center.block-ver-xl
-          .col-sm-3.col-xs-6
+          .col-sm-3.col-xs-6.skill
             img(src="/assets/img/1.png")
             p Coding
-          .col-sm-3.col-xs-6
+          .col-sm-3.col-xs-6.skill
             img(src="/assets/img/2.png")
             p Design
-          .col-sm-3.col-xs-6
+          .col-sm-3.col-xs-6.skill
             img(src="/assets/img/3.png")
             p Animation
-          .col-sm-3.col-xs-6
+          .col-sm-3.col-xs-6.skill
             img(src="/assets/img/4.png")
             p User Experience
+
 
 +work-tile(
   "edapp.com",
   "edapp.com is a website to promote Ed!. I was given the brief to improve user I designed and did the front end for",
-  "edapp.jpg",
+  "edapp.png",
   "desktop",
-  "front-end")
+  "front-end",
+  "first-block")
 
 +work-tile("Lamb Roast", "lorem egnsjgds sdg sd", "lambroast.png", "mobile")
-

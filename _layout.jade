@@ -7,10 +7,9 @@ html
 
     link(rel="icon" type="image/png" href="/assets/img/favicon.png")
     link(rel="stylesheet" href="/styles/main.css")
-    //- link(href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400italic|Amaranth:700' rel='stylesheet' type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400italic|Amaranth:700' rel='stylesheet' type='text/css')
     script(src="/bower_components/jquery-2.1.4.min/index.js")
-    //- script(type="text/javascript" src="/js/owl.carousel.min.js")
-    //- script(type="text/javascript" src="/js/skrollr.min.js")
+    script(src="/bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js")
     script(type="text/javascript" src="/js/main.js")
 
     title
@@ -18,17 +17,17 @@ html
         | Aarti D'Cruz &middot; UI Designer & Developer
 
   body
-    .outer-border
-      .border-top
-      .border-right
-      .border-left
-      .border-bottom
+    //- .outer-border
+      //- .border-top
+      //- .border-right
+      //- .border-left
+      //- .border-bottom
 
     //- include templates/components/top-nav
     != yield
 
 
-  footer
+  footer.panel
     #footer
       p This website was designed and built by me.
       p Copyright &copy; 2015 Aarti D'Cruz. All Rights Reserved.

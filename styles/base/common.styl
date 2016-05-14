@@ -20,29 +20,32 @@
   display table-cell
   vertical-align middle
 
-.left,
-.right
-  position absolute
-  top 0
-  bottom 0
-  height 100%
-  &:before,
-  &:after
-    content " " // 1
-    display table // 2
+.tight
+  padding: 0 !important
 
-  &:after
-    clear both
+// .left,
+// .right
+//   position absolute
+//   top 0
+//   bottom 0
+//   height 100%
+//   &:before,
+//   &:after
+//     content " " // 1
+//     display table // 2
 
-  @media screen and (max-width: 768px)
-    float none
-    width 100%
+//   &:after
+//     clear both
 
-.left
-  left 0px
-  background-color #f99678
-  width 30%
+//   @media screen and (max-width: 768px)
+//     float none
+//     width 100%
 
-.right
-  right 0px
-  width 70%
+// .left
+//   left 0px
+//   background-color #f99678
+//   width 30%
+
+// .right
+//   right 0px
+//   width 70%
