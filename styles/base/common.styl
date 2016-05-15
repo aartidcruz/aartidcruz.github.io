@@ -6,9 +6,11 @@
   position: relative
 
 .center
-  position relative
+  position absolute
   top 50%
-  transform translateY(-50%)
+  left 50%
+  transform translate(-50%, -50%)
+  width 100%
 
 .table
   display table
@@ -22,30 +24,3 @@
 
 .tight
   padding: 0 !important
-
-// .left,
-// .right
-//   position absolute
-//   top 0
-//   bottom 0
-//   height 100%
-//   &:before,
-//   &:after
-//     content " " // 1
-//     display table // 2
-
-//   &:after
-//     clear both
-
-//   @media screen and (max-width: 768px)
-//     float none
-//     width 100%
-
-// .left
-//   left 0px
-//   background-color #f99678
-//   width 30%
-
-// .right
-//   right 0px
-//   width 70%

@@ -4,7 +4,13 @@ footer
 footer
   position relative
 
-@media (min-width 700px)
+#steakmatejapan
+  .work
+    display inline-block
+    width 50%
+
+
+@media screen and (min-width 800px)
   @keyframes moveUp
     0%
       transform translate(0, 0)
@@ -34,25 +40,32 @@ footer
     -o-transition-timing-function cubic-bezier(0.645, 0.045, 0.355, 1.000)
     transition-timing-function cubic-bezier(0.645, 0.045, 0.355, 1.000) /* easeInOutCubic */
 
-  #edappcom
+  .works
     .left,
     .right,
     .work
       @extend .cubic-bezier
         transition-delay 0ms !important
+    .right,
     .left
       opacity 0
     .work
-      transform translate(-100%, 0)
+      // transform translate(-200px, 0)
+      margin-right: 200px
     .right
-      transform translate(100%, 0)
+      // transform translate(200px, 0)
+      margin-left: 200px
 
+  .works
     &.active
+      .right,
       .left
         opacity 1
       .work,
       .right
-        transform translate(0, 0)
+        // transform translate(0, 0)
+        margin-right: 0
+        margin-left: 0
 
   #scene-2
     .skill,

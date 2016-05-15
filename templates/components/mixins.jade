@@ -1,11 +1,13 @@
 mixin work-tile(title, description, work_url, device, tag, live_link, cta)
-  .block-grey.panel.section.works(id=title.replace(/[^\w]|_/g, "").toLowerCase())
+  .block-grey.panel.section.works
     .container-fluid.tight
-      .row.section
+      .row.section(id=title.replace(/[^\w]|_/g, "").toLowerCase())
         .col-xs-12.col-md-8.section.table.left.tight
           .block-lg.table-cell
             img.work(src="/assets/img/work/#{work_url}" class="work-#{device}")
-
+            if block
+              block
+              
         .col-xs-12.col-md-4.section.text-left.table.right.tight
           .block-lg.table-cell
             h2.text-xxl=title
