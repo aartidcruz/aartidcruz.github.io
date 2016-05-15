@@ -1,16 +1,16 @@
-mixin work-tile(title, description, work_url, device, tag, klass)
-  .block-grey.panel.section.works(class=klass id=title.replace(/[^\w]|_/g, "").toLowerCase())
+mixin work-tile(title, description, work_url, device, tag, live_link, cta)
+  .block-grey.panel.section.works(id=title.replace(/[^\w]|_/g, "").toLowerCase())
     .container-fluid.tight
       .row.section
         .col-xs-12.col-md-8.section.table.left.tight
           .block-lg.table-cell
-            //- img(src="/assets/img/#{device}.png" class="#{device}")
             img.work(src="/assets/img/work/#{work_url}" class="work-#{device}")
 
         .col-xs-12.col-md-4.section.text-left.table.right.tight
           .block-lg.table-cell
             h2.text-xxl=title
             p=description
-
             if tag
               h3.text-orange.amaranth=tag
+              
+            a.btn(href="#{live_link}", target="_blank") #{cta}
