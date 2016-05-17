@@ -1,5 +1,5 @@
 $(document).ready ->
-  if window.innerWidth > 800
+  if window.innerWidth > 1024
     controller = new (ScrollMagic.Controller)(globalSceneOptions: triggerHook: 'onLeave')
     controller2 = new (ScrollMagic.Controller)(globalSceneOptions: triggerHook: 'onLeave')
     # get all slides

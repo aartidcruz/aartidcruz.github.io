@@ -14,22 +14,22 @@ include /templates/components/mixins
     img.me(src="/assets/img/me.png")
 
   .rocket-moon
-    img.rocket(src="/assets/img/rocket.png")
+    //- img.rocket(src="/assets/img/rocket.png")
     img.moon(src="/assets/img/moon.png")
 
-.about-me.section#scene-2.panel
+#about-me.section.panel
   .container.table
     .row.table-cell
       .col-sm-12.block-lg.text-left
         h2.text-orange.text-xxl.title About me
 
-        p.text-md
+        p.text-md.about-me-desc
           | I’m a UI/UX designer and front end developer who lives in Sydney. 
-          | With 2 years under my belt at&nbsp;
+          | With 2 and a half years under my belt at&nbsp;
           a(href="http://www.creativelicencedigital.com/", target="_blank") 
             | Creative Licence Digital
           | , I’ve had the opportunity to learn how to create beautiful and 
-          | practical interfaces, as well as learning to code with radtastic 
+          | practical interfaces, as well as coding with radtastic 
           | languages such as sass, jade and js. I also enjoy illustration, and 
           | animation! In my spare time, I play guitar and watch terrible tv 
           | shows on netflix like a regular person.
@@ -51,23 +51,24 @@ include /templates/components/mixins
             
 +work-tile(
   "edapp.com",
-  "edapp.com is a website to promote Ed LMS, another App created at Creative"+ 
-  "Licence Digital. I was given the brief to improve the user experience of the"+ 
-  "site and to encourage visitors to try out Ed. I designed and did the front"+
-  " end for this website as well as creating the video in the header.",
+  "edapp.com is a website to promote Ed LMS, another App created at Creative "+ 
+  "Licence Digital. I was given the brief to improve the user experience of the "+ 
+  "site and to encourage visitors to try out Ed. I designed and did the front "+
+  "end for this website as well as the icons and creating the video in the header.",
   "edapp.png",
   "desktop",
-  "front-end design UX",
+  "Front-end + Design + UX",
   "http://www.edapp.com/",
   "View Live")
 
-+work-tile("Network Ten Media Website", "This was a super fun project, MLA contacted us to "+
-"do a Japanese version of SteakMate to promote Aussie beef in Japan and I had "+
-"complete freedom with the design. They wanted a 'Kawaii Australian' Theme"+
-"so I came up with a Koala riding a piece of steak. I got to create all the animations as well",
++work-tile("Network Ten Media Website", "This site was created for Network Ten, "+
+"the brief was to re-design their internal media website and make it more user friendly. "+
+"The design was already finalized when I was brought in to do the front end, this was "+
+"one of my first major websites that I developed the front-end for on my own, and I had a lot of fun "+
+"with it!",
 "ten.png", 
 "desktop",
-"front-end",
+"Front-end",
 "http://networktenmedia.com.au/",
 "View Live"
 )
@@ -80,16 +81,16 @@ include /templates/components/mixins
 "no longer on the App Store as it has evolved into RoastMate.",
 "lambroast.png", 
 "mobile",
-"front-end design UX"
+"Front-end + Design + UX"
 )
 
-+work-tile("SteakMate Japan", "This was a super fun project, MLA contacted us to "+
++work-tile("SteakMate Japan", "This was a super fun project, MLA contacted CLD to "+
 "do a Japanese version of SteakMate to promote Aussie beef in Japan and I had "+
-"complete freedom with the design. They wanted a 'Kawaii Australian' Theme"+
-"so I came up with a Koala riding a piece of steak. I got to create all the animations as well",
+"complete freedom with the design. They wanted a 'Kawaii Australian' Theme "+
+"so I came up with a Koala riding a piece of steak. I got to create all the animations as well!",
 "steakmatejapan.png",
 "mobile",
-"front-end design UX animation",
+"Front-end + Design + UX + Animation",
 "https://itunes.apple.com/jp/app/babimeito/id909283176?l=en&mt=8",
 "Download from the App Store")
-  video.work.mobile(src="/assets/img/work/steakmate-animation.mp4" autoplay loop)
+  video.work-mobile(src="/assets/img/work/steakmate-animation.mp4" autoplay loop)

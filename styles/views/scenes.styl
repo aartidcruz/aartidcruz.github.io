@@ -5,84 +5,100 @@ footer
   position relative
 
 #steakmatejapan
-  .work
+  .work-mobile
     display inline-block
     width 50%
+    max-width: 360px
+
+#lambroast
+  .work
+    width 600px
+    max-width: 100%
+
+.right,
+.left
+  overflow: hidden
+
+@keyframes moveUp
+  0%
+    transform translate(0, 0)
+  50%
+    transform translate(0, 10px)
+  100%
+    transform translate(0, 0)
+
+@keyframes dash
+  0%
+    transform translate(-100%, 0)
+  50%
+    transform translate(0, 0)
+  99%
+    transform translate(0.9px, 0)
+  100%
+    transform translate(0, 0)
+
+.cubic-bezier
+  -webkit-transition all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000)
+  -moz-transition all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000)
+  -o-transition all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000)
+  transition all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000) /* easeInOutCubic */
+
+  -webkit-transition-timing-function cubic-bezier(0.645, 0.045, 0.355, 1.000)
+  -moz-transition-timing-function cubic-bezier(0.645, 0.045, 0.355, 1.000)
+  -o-transition-timing-function cubic-bezier(0.645, 0.045, 0.355, 1.000)
+  transition-timing-function cubic-bezier(0.645, 0.045, 0.355, 1.000) /* easeInOutCubic */
 
 
-@media screen and (min-width 800px)
-  @keyframes moveUp
-    0%
-      transform translate(0, 0)
-    50%
-      transform translate(0, 10px)
-    100%
-      transform translate(0, 0)
 
-  @keyframes dash
-    0%
-      transform translate(-100%, 0)
-    50%
-      transform translate(0, 0)
-    99%
-      transform translate(0.9px, 0)
-    100%
-      transform translate(0, 0)
 
-  .cubic-bezier
-    -webkit-transition all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000)
-    -moz-transition all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000)
-    -o-transition all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000)
-    transition all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000) /* easeInOutCubic */
-
-    -webkit-transition-timing-function cubic-bezier(0.645, 0.045, 0.355, 1.000)
-    -moz-transition-timing-function cubic-bezier(0.645, 0.045, 0.355, 1.000)
-    -o-transition-timing-function cubic-bezier(0.645, 0.045, 0.355, 1.000)
-    transition-timing-function cubic-bezier(0.645, 0.045, 0.355, 1.000) /* easeInOutCubic */
-
+@media screen and (min-width: 1025px)
   .works
-    .left,
-    .right,
-    .work
-      @extend .cubic-bezier
-        transition-delay 0ms !important
-    .right,
-    .left
+    .work-img,
+    .work-desc
       opacity 0
-    .work
-      // transform translate(-200px, 0)
-      margin-right: 200px
-    .right
-      // transform translate(200px, 0)
-      margin-left: 200px
+      @extend .cubic-bezier
+      transition-delay 0ms !important
+    .work-desc,
+    .work-img
+      position: relative
+      top: 50%
+      left: 50%
+    .work-img
+      transform: translate(-60%, -50%)
+    .work-desc
+      transform: translate(-40%, -50%)
 
   .works
     &.active
-      .right,
-      .left
+      .work-img,
+      .work-desc
         opacity 1
-      .work,
-      .right
-        // transform translate(0, 0)
-        margin-right: 0
-        margin-left: 0
+        transform: translate(-50%, -50%)
 
-  #scene-2
+  #about-me
     .skill,
-    .title
+    .title,
+    .about-me-desc
       @extend .cubic-bezier
+      opacity: 0
+    .title
+      transform: translate(-100px, 0)
+
     &.active
       .skill
         animation-name moveUp
         animation-duration 400ms
         animation-iteration-count 1
         animation-timing-function ease-in-out
-      .title
-        animation-name dash
-        animation-duration 400ms
-        animation-iteration-count 1
-        animation-timing-function ease-in-out
+      .about-me-desc,
+      .title,
+      .skill
+        opacity: 1
+        transform: translate(0, 0)
+      .about-me-desc
+        transition-delay 300ms
 
   for num in (1...5)
     .skill:nth-of-type({num})
       animation-delay (300+(num*100))ms
+      transition-delay (300+(num*100))ms !important
