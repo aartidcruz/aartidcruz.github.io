@@ -2,4 +2,20 @@
   background-color blue
   color white
   clear both
-  padding 90px
+  padding 50px
+
+  .footer-link
+    display inline-block
+    @extend .cubic-bezier
+    &:hover
+      transform(scale(1.05))
+
+  img
+    width: 70px
+    margin: 0 10px
+
+  .divider
+    border-top 2px solid rgba(255, 255, 255, 0.5)
+    width: 50px
+    margin-left: auto
+    margin-right: auto

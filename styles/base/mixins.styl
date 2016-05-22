@@ -16,12 +16,12 @@ clearfix()
 .clearfix
   clearfix()
 
-transition($transition...)
-  -webkit-transition $transition
-  -moz-transition $transition
-  -ms-transition $transition
-  -o-transition $transition
-  transition $transition
+transition(transition)
+  -webkit-transition transition
+  -moz-transition transition
+  -ms-transition trznsition
+  -o-transition transition
+  transition transition
 
 transform($transform...)
   -webkit-transform $transform
@@ -87,4 +87,3 @@ linearGradient($top, $bottom)
   background -ms-linear-gradient(top,  $top 0%,$bottom 100%)
   background linear-gradient(to bottom,  $top 0%,$bottom 100%)
   // filter progidDXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0)
-

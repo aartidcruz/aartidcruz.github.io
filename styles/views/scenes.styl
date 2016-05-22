@@ -4,50 +4,41 @@ footer
 footer
   position relative
 
+.works 
+  box-sizing border-box
 #steakmatejapan
   .work-mobile
     display inline-block
     width 50%
-    max-width: 360px
+    max-width 360px
+    max-height 100%
 
 #lambroast
   .work
     width 600px
-    max-width: 100%
-
+    max-width 100%
+    
 .right,
 .left
   overflow: hidden
 
 @keyframes moveUp
   0%
-    transform translate(0, 0)
+    transform(translate(0, 0))
   50%
-    transform translate(0, 10px)
+    transform(translate(0, 10px))
   100%
-    transform translate(0, 0)
+    transform(translate(0, 0))
 
 @keyframes dash
   0%
-    transform translate(-100%, 0)
+    transform(translate(-100%, 0))
   50%
-    transform translate(0, 0)
+    transform(translate(0, 0))
   99%
-    transform translate(0.9px, 0)
+    transform(translate(0.9px, 0))
   100%
-    transform translate(0, 0)
-
-.cubic-bezier
-  -webkit-transition all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000)
-  -moz-transition all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000)
-  -o-transition all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000)
-  transition all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000) /* easeInOutCubic */
-
-  -webkit-transition-timing-function cubic-bezier(0.645, 0.045, 0.355, 1.000)
-  -moz-transition-timing-function cubic-bezier(0.645, 0.045, 0.355, 1.000)
-  -o-transition-timing-function cubic-bezier(0.645, 0.045, 0.355, 1.000)
-  transition-timing-function cubic-bezier(0.645, 0.045, 0.355, 1.000) /* easeInOutCubic */
-
+    transform(translate(0, 0))
 
 
 
@@ -64,16 +55,16 @@ footer
       top: 50%
       left: 50%
     .work-img
-      transform: translate(-60%, -50%)
+      transform(translate(-60%, -50%))
     .work-desc
-      transform: translate(-40%, -50%)
+      transform(translate(-40%, -50%))
 
   .works
     &.active
       .work-img,
       .work-desc
         opacity 1
-        transform: translate(-50%, -50%)
+        transform(translate(-50%, -50%))
 
   #about-me
     .skill,
@@ -82,7 +73,7 @@ footer
       @extend .cubic-bezier
       opacity: 0
     .title
-      transform: translate(-100px, 0)
+      transform(translate(-100px, 0))
 
     &.active
       .skill
@@ -94,7 +85,7 @@ footer
       .title,
       .skill
         opacity: 1
-        transform: translate(0, 0)
+        transform(translate(0, 0))
       .about-me-desc
         transition-delay 300ms
 

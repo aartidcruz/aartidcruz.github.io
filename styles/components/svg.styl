@@ -4,32 +4,3 @@
   width 26em
   margin 0 auto
   max-width: 100%
-
-.letter
-  fill transparent
-  stroke #FFFFFF
-  stroke-width 0.5
-  stroke-miterlimit 10
-  stroke-dasharray 1000
-  stroke-dashoffset 1000
-  transition(900ms)
-
-  // &.stroke-up
-  animation(dash 6s linear forwards)
-
-.intro-text
-  &.fill-up
-    .letter
-      fill white
-      stroke-width 0
-
-for i in (1..11)
-  .letter:nth-of-type({i})
-    animation-delay((i*60)ms)
-
-@keyframes dash
-  from
-    stroke-dashoffset 1000
-
-  to
-    stroke-dashoffset 0
