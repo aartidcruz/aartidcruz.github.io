@@ -29,7 +29,7 @@
   position absolute
   top 45%
   left 50%
-  transform translate(-50%, -50%)
+  transform(translate(-50%, -50%))
   width: 100%
   @media screen and (max-width: $screen-xs-min)
     top 50%
@@ -41,15 +41,15 @@
 
 @keyframes pulse
   0%
-    transform translate(-30%, 0%)
+    transform(translate(-30%, 0%))
   100%
-    transform translate(-30%, 5%)
+    transform(translate(-30%, 5%))
 
 @keyframes pulseMobile
   0%
-    transform translate(-40%, 15%)
+    transform(translate(-40%, 15%))
   100%
-    transform translate(-40%, 20%)
+    transform(translate(-40%, 20%))
 
 
 .me
@@ -75,7 +75,7 @@
 
   @media screen and (max-width: $screen-xs-min)
     width 150px
-    transform translate(-40%, 0)
+    transform(translate(-40%, 0))
     animation-name pulseMobile
 
 .rocket-moon

@@ -1,0 +1,26 @@
+html,
+body
+  height 100%
+
+body
+  margin 0
+  padding 0
+  width 100%
+  font-size 1.2em
+  line-height 1.5
+  font-family 'Alegreya Sans', sans-serif
+  color #2c3a48
+  font-weight normal
+  text-align center
+  -webkit-font-smoothing anti-aliased
+  box-sizing border-box
+  &.loaded
+    overflow-y: auto
+
+  a
+    text-decoration none
+    color transparentify(#2c3a48, 0.3)
+    transition(all 400ms)
+    &:hover
+      text-decoration none
+      color #2c3a48
