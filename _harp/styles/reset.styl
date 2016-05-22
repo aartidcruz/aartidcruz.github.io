@@ -20,7 +20,11 @@ body
   a
     text-decoration none
     color transparentify(#2c3a48, 0.3)
-    transition(all 400ms)
+    -webkit-transition: 400ms 
+    -moz-transition: 400ms
+    -o-transition: 400ms
+    transition: 400ms
+
     &:hover
       text-decoration none
       color #2c3a48
