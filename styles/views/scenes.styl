@@ -1,0 +1,96 @@
+.works,
+footer
+  z-index 3
+footer
+  position relative
+
+.works 
+  box-sizing border-box
+  
+#steakmatejapan
+  .work-mobile
+    display inline-block
+    width 50%
+    max-width 360px
+    max-height 100%
+
+#lambroast
+  .work
+    width 600px
+    max-width 100%
+    
+.right,
+.left
+  overflow: hidden
+
+@keyframes moveUp
+  0%
+    transform translate(0, 0)
+  50%
+    transform translate(0, 10px)
+  100%
+    transform translate(0, 0)
+
+@keyframes dash
+  0%
+    transform translate(-100%, 0)
+  50%
+    transform translate(0, 0)
+  99%
+    transform translate(0.9px, 0)
+  100%
+    transform translate(0, 0)
+
+
+
+@media screen and (min-width: 1025px)
+  .works
+    .work-img,
+    .work-desc
+      opacity 0
+      @extends .cubic-bezier
+      transition-delay 0ms !important
+    .work-desc,
+    .work-img
+      position: relative
+      top: 50%
+      left: 50%
+    .work-img
+      transform translate(-60%, -50%)
+    .work-desc
+      transform translate(-40%, -50%)
+
+  .works
+    &.active
+      .work-img,
+      .work-desc
+        opacity 1
+        transform translate(-50%, -50%)
+
+  #about-me
+    .skill,
+    .title,
+    .about-me-desc
+      @extends .cubic-bezier
+      opacity: 0
+    .title
+      transform translate(-100px, 0)
+
+    &.active
+      .skill
+        animation-name moveUp
+        animation-duration 400ms
+        animation-iteration-count 1
+        animation-timing-function ease-in-out
+      .about-me-desc,
+      .title,
+      .skill
+        opacity: 1
+        transform translate(0, 0)
+      .about-me-desc
+        transition-delay 300ms
+
+  for num in (1...5)
+    .skill:nth-of-type({num})
+      animation-delay (300+(num*100))ms
+      transition-delay (300+(num*100))ms !important

@@ -1,0 +1,98 @@
+// Alignment
+.text-left
+  text-align left
+.text-right
+  text-align right
+.text-center
+  text-align center
+.text-justify
+  text-align justify
+
+.text-inline
+  display inline
+
+// Wrapping
+.text-nowrap
+  white-space nowrap
+.text-pre
+  white-space pre-line
+.text-ellipsis
+  text-overflow ellipsis
+  white-space nowrap
+  overflow hidden
+
+// Style
+.text-italic
+  font-style italic
+
+// Weight
+h1, h2, h3, h4
+  font-weight 700
+  line-height: 1.2em
+
+.text-bold
+  font-weight 700
+
+h1, h2
+  font-family "Amaranth", sans-serif
+
+h5, h6, .text-normal
+  font-weight normal
+
+// Size
+h1, .text-xxl
+  font-size 3em
+  @media screen and (max-width: $screen-md-min)
+    font-size 2.5em !important
+
+h2, .text-xl
+  font-size 1.75em
+h3, .text-lg
+  font-size 1.5em
+h4, .text-md
+  font-size 1.15em
+h5, .text-sm
+  font-size 0.85em
+
+// Margin and spacing
+h1, h2, h3, h4, h5
+  margin 0 0 0.4em
+
+p
+  margin 0 0 0.3em
+
+.tight
+  margin-bottom 0
+
+h1
+  line-height 56px
+
+h1, h2, h3, h4
+  text-rendering optimizeLegibility
+  text-rendering geometricPrecision
+
+ul, ol
+  padding-left 1.2em
+
+hr
+  border-width 1px 0 0 0
+  width 100%
+  
+// Transformation
+.text-lowercase
+  text-transform lowercase
+.text-uppercase
+  text-transform uppercase
+.text-capitalize
+  text-transform capitalize
+.text-normal-case
+  text-transform none !important
+
+
+h1, h2, h3, h4
+  text-rendering optimizeLegibility
+  text-rendering geometricPrecision
+
+// Colors
+.text-orange
+  color: orange
