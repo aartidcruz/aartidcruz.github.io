@@ -40,6 +40,19 @@ footer
     transform(translate(0.9px, 0))
   100%
     transform(translate(0, 0))
+    
+@media screen and (max-height: 768px)
+  .work-img
+    height 100%
+  .work
+    width: auto !important
+    height: 100%
+    max-height: 100%
+  #steakmatejapan
+    .work-mobile
+      width: auto !important
+      max-height: 100%
+    
 
 @media screen and (min-width: 1025px)
   .works
@@ -48,8 +61,6 @@ footer
       opacity 0
       transition(all 400ms)
       transition-delay 0ms !important
-    .work-desc,
-    .work-img
       position: relative
       top: 50%
       left: 50%
