@@ -42,17 +42,34 @@ footer
     transform(translate(0, 0))
     
 @media screen and (max-height: 768px)
-  .work-img
-    height 100%
+  .work-img,
   .work
-    width: auto !important
     height: 100%
-    max-height: 100%
   #steakmatejapan
-    .work-mobile
+    .work-mobile 
+      width 50% !important
+      max-width 300px
+
+  #lambroast
+    .work
       width: auto !important
-      max-height: 100%
-    
+      max-width 500px !important
+      
+@media screen and (max-height: 600px)
+  #lambroast
+    .work
+      width: auto !important
+      max-width 400px !important
+  #steakmatejapan
+    .work-mobile 
+      width 50% !important
+      max-width 250px
+  
+  #networktenmediawebsite,
+  #edappcom
+    .work 
+      max-height 100%
+      
 
 @media screen and (min-width: 1025px)
   .works
