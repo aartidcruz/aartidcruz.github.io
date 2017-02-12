@@ -1,4 +1,5 @@
 $(document).ready ->
+
   if window.innerWidth > 1024
     controller = new (ScrollMagic.Controller)(globalSceneOptions: triggerHook: 'onLeave')
     controller2 = new (ScrollMagic.Controller)(globalSceneOptions: triggerHook: 'onLeave')
