@@ -2,53 +2,41 @@ include /templates/components/mixins
 
 .bg-header.panel
   .intro-text.block-hor-lg#scene-1
-    p.text-md.block-ver-lg Hi, I'm
-    include templates/components/name
-    h1.hide Aarti D'Cruz, UI/UX Designer and Developer
+    h1 Hi, hello
+    h1.text-xl I'm Aarti
 
-    p.text-md.block-ver-lg.subtitle
-      | A day dreamer, who also
-      br
-      | happens to design and code.
-
-    img.me(src="/assets/img/me.png")
-
-  .rocket-moon
-    img.moon(src="/assets/img/moon.png")
-
-  img.down(src="/assets/img/down.png")
-
+    p.breaker Product + brand design
+    p.breaker Front-end tinkerer
+    p.breaker Motion
+    p.breaker Regular human
+    
+    .text-center.block-top-xl
+      .skill
+        img(src="/assets/img/code.svg")
+      .skill
+        img(src="/assets/img/design.svg")
+      .skill
+        img(src="/assets/img/motion.svg")
+      .skill
+        img(src="/assets/img/human.svg")
+                
 #about-me.section.panel
   .container.table
     .row.table-cell
       .col-sm-12.block-lg.text-left
-        h2.text-orange.text-xxl.title About me
+        h2.text-xxl.title About me
 
         p.text-md.about-me-desc
-          | I’m a UI/UX Designer and front end web dev who lives in Sydney. 
+          | I’m a digital/product designer + front end web dev who lives in London. 
           | Currently I'm working at 
           a(href="https://www.airtasker.com/" target="_blank") Airtasker 
-          | as a Designer and CSS tinkerer.
-          | With my 4 years of experience working I’ve had the opportunity to learn how to create beautiful and 
-          | practical interfaces, as well as coding with radtastic 
-          | languages such as sass, jade and js. I also enjoy illustration, and 
-          | animation! In my spare time, I create music and watch terrible tv 
-          | shows on netflix like a regular person.
+          | as a Designer and CSS tinkerer. With my 4 years of experience 
+          | working I’ve had the opportunity to learn how to create beautiful 
+          | and practical interfaces, as well as coding with radtastic languages 
+          | such as stylus, jsx, pug and react. I also enjoy illustration, 
+          | and animation! In my spare time, I create music and watch terrible 
+          | tv shows on netflix like a regular person.
 
-
-        .text-center.block-ver-xl
-          .col-sm-3.col-xs-6.skill
-            img(src="/assets/img/1.png")
-            p Coding
-          .col-sm-3.col-xs-6.skill
-            img(src="/assets/img/2.png")
-            p Design
-          .col-sm-3.col-xs-6.skill
-            img(src="/assets/img/3.png")
-            p Animation
-          .col-sm-3.col-xs-6.skill
-            img(src="/assets/img/4.png")
-            p User Experience
             
 +work-tile(
   "edapp.com",
@@ -102,7 +90,7 @@ include /templates/components/mixins
     ul.shots
 
       li.col-lg-4.col-sm-6: a(href="https://dribbble.com/shots/2231553-Hi-I-m-new-here-so-here-s-a-dinosaur-bopping-its-head", target="_blank")
-        img(src="https://d13yacurqjgara.cloudfront.net/users/933589/screenshots/2231553/dino-dance.gif" alt="Dino dance")      
+        img(src="https://cdn.dribbble.com/users/933589/screenshots/2231553/dino-dance.gif" alt="Dino dance")      
       li.col-lg-4.col-sm-6: a(href="https://dribbble.com/shots/3141595-Aircon-2016-Logo", target="_blank")
         img(alt="Aircon 2016 Logo" src="https://d13yacurqjgara.cloudfront.net/users/933589/screenshots/3141595/aircon-tshirt2_1x.jpg")
 
