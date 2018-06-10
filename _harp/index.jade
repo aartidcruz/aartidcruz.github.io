@@ -1,24 +1,26 @@
 include /templates/components/mixins
 
-.bg-header.panel
-  .intro-text.block-hor-lg#scene-1
-    h1 Hi, hello
-    h1.text-xl I'm Aarti
+#intro.section.panel
+  .container.table
+    .row.table-cell
+      .col-sm-12.block-lg
+        h1 Hi, hello
+        h1.text-xl I'm Aarti
 
-    p.breaker Product + brand design
-    p.breaker Front-end tinkerer
-    p.breaker Motion
-    p.breaker Regular human
-    
-    .text-center.block-top-xl
-      .skill
-        img(src="/assets/img/design.svg")
-      .skill
-        img(src="/assets/img/code.svg")
-      .skill
-        img(src="/assets/img/motion.svg")
-      .skill
-        img(src="/assets/img/human.svg")
+        p.breaker Product + brand design
+        p.breaker Front-end tinkerer
+        p.breaker Motion
+        p.breaker Regular human
+        
+        .text-center.block-top-xl
+          .skill
+            img(src="/assets/img/design.svg")
+          .skill
+            img(src="/assets/img/code.svg")
+          .skill
+            img(src="/assets/img/motion.svg")
+          .skill
+            img(src="/assets/img/human.svg")
                 
 #about-me.section.panel
   .container.table
@@ -38,19 +40,16 @@ include /templates/components/mixins
             | tv shows on netflix like a regular person.
 
             
-+work-tile(
-  "edapp.com",
-  "edapp.com is a website to promote Ed LMS, another App created at Creative "+ 
-  "Licence Digital. I was given the brief to improve the user experience of the "+ 
-  "site and to encourage visitors to try out Ed. I designed and did the front "+
-  "end for this website as well as the icons and creating the video in the header.",
-  "edapp.png",
++workTile(
+  "Airtasker + IKEA",
+  "Airtasker provided an assembly service for IKEA customers. This project needed a custom Airtasker post task flow that would be used in store on ipads at Airtasker kiosks.",
+  "airtasker-ikea.jpg",
   "desktop",
-  "Front-end + Design + UX",
-  "http://www.edapp.com/",
-  "View Live")
+  "Product + Brand + Kiosk design",
+  "/airtasker-ikea",
+  "View Project")
 
-+work-tile("Network Ten Media Website", "This site was created for Network Ten, "+
++workTile("Network Ten Media Website", "This site was created for Network Ten, "+
 "the brief was to re-design their internal media website and make it more user friendly. "+
 "The inital look and feel was done by our Creative Director, and I was then brought in to flesh out the design and UX, as well as implementing the front-end. This was "+
 "one of my first major websites that I developed the front-end for on my own, and I had a lot of fun "+
@@ -62,7 +61,7 @@ include /templates/components/mixins
 "View Live"
 )
 
-+work-tile("Lamb Roast", "Lamb Roast is a timer App that was build for the Meat "+ 
++workTile("Lamb Roast", "Lamb Roast is a timer App that was build for the Meat "+ 
 "& Livestock Association Aus, it was the first App I worked on that was released "+
 "to the App Store, and a bit of of a challenge illustrating the icons as I'm "+
 "a vegetarian but I was happy with the result in the end! I also then got the "+
@@ -73,7 +72,7 @@ include /templates/components/mixins
 "Front-end + Design + UX"
 )
 
-+work-tile("SteakMate Japan", "This was a super fun project, MLA contacted CLD to "+
++workTile("SteakMate Japan", "This was a super fun project, MLA contacted CLD to "+
 "do a Japanese version of SteakMate to promote Aussie beef in Japan and I had "+
 "complete freedom with the design. They wanted a 'Kawaii Australian' Theme "+
 "so I came up with a Koala riding a piece of steak. I got to create all the animations as well!",
@@ -82,7 +81,7 @@ include /templates/components/mixins
 "Front-end + Design + UX + Animation",
 "https://itunes.apple.com/jp/app/babimeito/id909283176?l=en&mt=8",
 "Download from the App Store")
-  video.work-mobile(src="/assets/img/work/steakmate-animation.mp4" autoplay loop)
+  video.work-mobile(src="/assets/work/steakmate-animation.mp4" autoplay loop)
   
 .block-grey.panel.section.works.dribbble-works
   .container-fluid.block-lg
@@ -115,7 +114,7 @@ include /templates/components/mixins
       li.col-lg-4.col-sm-6: a(href="  https://dribbble.com/shots/3141583-Like-A-Boss", target="_blank") 
         img(alt="Like A Boss" src="https://d13yacurqjgara.cloudfront.net/users/933589/screenshots/3141583/lab-dribbble_1x.png")
 
-footer.panel.block-navy
+footer.panel
   #footer
     p.text-lg.amaranth Want to see more?
     p
@@ -127,9 +126,7 @@ footer.panel.block-navy
       a.footer-link(href="mailto:aarti.dcruz@gmail.com", target="_blank"): img(src="/assets/img/email.png")
       a.footer-link(href="http://dribbble.com/aartichokes", target="_blank"): img(src="/assets/img/dribbble.png")
       a.footer-link(href="http://github.com/aartidcruz/", target="_blank"): img(src="/assets/img/github.png")
-      
     .divider
-  
-  .block-dark.block-lg
-    p.text-sm This website was designed and built by me.
-    p.text-sm Copyright &copy; 2017 Aarti D'Cruz. All Rights Reserved.
+    .block-lg
+      p.text-sm This website was designed and built by me.
+      p.text-sm Copyright &copy; 2018 Aarti D'Cruz. All Rights Reserved.

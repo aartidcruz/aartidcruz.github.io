@@ -1,4 +1,5 @@
 $(document).ready ->
+  currentYear = new Date().getFullYear()
 
   if window.innerWidth > 1024
     controller = new (ScrollMagic.Controller)(globalSceneOptions: triggerHook: 'onLeave')
