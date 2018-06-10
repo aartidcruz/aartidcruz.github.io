@@ -19,12 +19,26 @@
   &:last-of-type
     &:after
       content none
+  &.breaker-single
+    &:before,
+    &:after
+      content ''
+      background-image url('../assets/breaker.svg')
+      background-repeat no-repeat
+      background-size 100% 100%
+      width auto
+      height 12px
+      display inline-block
+      padding 0 37px
 
 .section
   position relative
   height 100%
   @media screen and (max-width: 1025px)
     height auto
+
+.block
+  display block
 
 .center
   position absolute
