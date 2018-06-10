@@ -13,6 +13,6 @@ mixin workTile(title, description, work_url, device, tag, live_link, cta)
             h2.text-xl.blue=title
             p=description
             if tag
-              h3.text-orange.amaranth=tag
+              h3.subtitle=tag
               
             a.btn(href="#{live_link}", target="_blank") #{cta}

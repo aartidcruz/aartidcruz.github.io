@@ -29,14 +29,15 @@ footer
 .works
   box-sizing border-box
   background white
+  .subtitle
+    font-size 18px
+    color $green
 
 .work-img
   height auto
 
 .work
-  -webkit-box-shadow 0px 20px 70px 0px rgba(44,58,72,0.34)
-  -moz-box-shadow 0px 20px 70px 0px rgba(44,58,72,0.34)
-  box-shadow 0px 20px 70px 0px rgba(44,58,72,0.34)
+  box-shadow(0px 20px 70px 0px rgba(44,58,72,0.34))
 
 #steakmatejapan
   .work-mobile
@@ -78,14 +79,14 @@ footer
 
   #lambroast
     .work
-      width: auto !important
+      width auto !important
       max-width 500px !important
 
 
 @media screen and (max-height: 600px)
   #lambroast
     .work
-      width: auto !important
+      width auto !important
       max-width 400px !important
   #steakmatejapan
     .work-mobile
@@ -123,16 +124,16 @@ footer
 #intro
   .breaker
     display inline-block
-    padding-top: 40px
+    padding-top 40px
     &:after
-      content: ''
-      background-image: url('../assets/img/breaker.svg')
-      background-repeat: no-repeat
-      background-size: 100% 100%
-      width: auto
-      height: 12px
-      display: inline-block
-      padding: 0 37px
+      content ''
+      background-image url('../assets/img/breaker.svg')
+      background-repeat no-repeat
+      background-size 100% 100%
+      width auto
+      height 12px
+      display inline-block
+      padding 0 37px
     &:last-of-type
       &:after
         content none
@@ -156,9 +157,9 @@ footer
   .about-me-desc,
   .title,
   .skill
-    transition-delay: 900ms
+    opacity 1
+    transition-delay 900ms
     transition(opacity 400ms)
-    opacity: 1
     transform(translate(0, 0))
 
 for num in (1...5)
