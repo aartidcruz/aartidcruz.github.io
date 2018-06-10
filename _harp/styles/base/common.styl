@@ -1,3 +1,25 @@
+.hero
+  color $blue
+
+.shadow
+  filter(drop-shadow(6px 12px 7px rgba(44,58,72,0.34)))
+
+.breaker
+  display inline-block
+  padding-top 40px
+  &:after
+    content ''
+    background-image url('../assets/breaker.svg')
+    background-repeat no-repeat
+    background-size 100% 100%
+    width auto
+    height 12px
+    display inline-block
+    padding 0 37px
+  &:last-of-type
+    &:after
+      content none
+
 .section
   position relative
   height 100%

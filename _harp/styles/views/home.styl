@@ -16,9 +16,6 @@
   &.scrolling
     width 40px
 
-#intro
-  color $blue
-
 #about-me
   background $blue
   color white
@@ -38,21 +35,26 @@
     transform(translate(-40%, 20%))
 
 .works,
-footer
+#footer
   z-index 3
 
-footer
+#footer
   position relative
 
+.dribbble-shot
+  padding 5px
+  overflow hidden
+  max-height 260px
+
 .works
-  box-sizing border-box
   background white
   .work-category
     color $blue
     font-size 18px
     padding-bottom 20px
   .btn
-    font-size 16px
+    font-size 12px
+    font-family $bold
     &:after
       content ''
       width 13px
@@ -172,22 +174,6 @@ footer
         transform(translate(-50%, -50%))
 
 #intro
-  .breaker
-    display inline-block
-    padding-top 40px
-    &:after
-      content ''
-      background-image url('../assets/breaker.svg')
-      background-repeat no-repeat
-      background-size 100% 100%
-      width auto
-      height 12px
-      display inline-block
-      padding 0 37px
-    &:last-of-type
-      &:after
-        content none
-
   .skill,
   .title,
   .about-me-desc

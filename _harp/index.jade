@@ -1,7 +1,7 @@
 include /components/mixins
 include /components/logomark
 
-#intro.section.panel
+#intro.section.panel.hero
   .container.table
     .row.table-cell
       .col-sm-12.block-lg
@@ -78,10 +78,17 @@ include /components/logomark
 "The inital look and feel was done by our Creative Director, and I was then brought in to flesh out the design and UX, as well as implementing the front-end. This was "+
 "one of my first major websites that I developed the front-end for on my own, and I had a lot of fun "+
 "with it!",
-"ten.png", 
+"ten.jpg", 
 "desktop",
-"Front-end",
-"http://networktenmedia.com.au/"
+"Front-end"
+)
+  
++workTile("edapp.com", 
+"This site was created for Network Ten, "+
+"edapp.com is a website to promote Ed LMS, another App created at Creative Licence Digital. I was given the brief to improve the user experience of the site and to encourage visitors to try out Ed. I designed and did the front end for this website as well as the icons and creating the video in the header.",
+"edapp.jpg", 
+"desktop",
+"Front-end + Design + UX"
 )
 
 +workTile("Lamb Roast", "Lamb Roast is a timer App that was build for the Meat "+ 
@@ -101,54 +108,22 @@ include /components/logomark
 "so I came up with a Koala riding a piece of steak. I got to create all the animations as well!",
 "steakmatejapan.png",
 "mobile",
-"Front-end + Design + UX + Animation",
-"https://itunes.apple.com/jp/app/babimeito/id909283176?l=en&mt=8")
+"Front-end + Design + UX + Animation")
   video.work-mobile(src="/assets/work/steakmate-animation.mp4" autoplay loop)
-  
-.block-grey.panel.section.works.dribbble-works
-  .container-fluid.block-lg
-    h3 Other works
-    ul.shots
 
-      li.col-lg-4.col-sm-6: a(href="https://dribbble.com/shots/2231553-Hi-I-m-new-here-so-here-s-a-dinosaur-bopping-its-head", target="_blank")
-        img(src="https://cdn.dribbble.com/users/933589/screenshots/2231553/dino-dance.gif" alt="Dino dance")      
-      li.col-lg-4.col-sm-6: a(href="https://dribbble.com/shots/3141595-Aircon-2016-Logo", target="_blank")
-        img(alt="Aircon 2016 Logo" src="https://d13yacurqjgara.cloudfront.net/users/933589/screenshots/3141595/aircon-tshirt2_1x.jpg")
 
-      li.col-lg-4.col-sm-6: a(href="https://dribbble.com/shots/2687049-Donut-shoot-me", target="_blank")
-        img(src="https://d13yacurqjgara.cloudfront.net/users/933589/screenshots/2687049/spacey5.gif" alt="Spacey5")
+#footer
+  p.text-lg.bold Want to see more?
+  p
+    | Shoot me an email to get in touch,
+    br
+    | or view more of my work on dribbble/github!
 
-      li.col-lg-4.col-sm-6: a(href="https://dribbble.com/shots/2735715-Academy-Blog", target="_blank") 
-        img(src="https://d13yacurqjgara.cloudfront.net/users/933589/screenshots/2735715/academy3.gif" alt="Academy3")
-
-      li.col-lg-4.col-sm-6: a(href="https://dribbble.com/shots/2930286-Airtasker-Earn-Money-Illustrations", target="_blank") 
-        img(src="https://d13yacurqjgara.cloudfront.net/users/933589/screenshots/2930286/earn-money-gif.gif" alt="Earn money gif")
-
-      li.col-lg-4.col-sm-6: a(href="https://dribbble.com/shots/2490057-Thanks-for-subscribing", target="_blank") 
-        img(alt="Thanks for subscribing!" src="https://d13yacurqjgara.cloudfront.net/users/933589/screenshots/2490057/thanks_1x.jpg")
-
-      li.col-lg-4.col-sm-6: a(href="https://dribbble.com/shots/2577216-Desert-email-header", target="_blank") 
-        img(alt="Desert email header" src="https://d13yacurqjgara.cloudfront.net/users/933589/screenshots/2577216/desert_1x.png")
-
-      li.col-lg-4.col-sm-6: a(href="https://dribbble.com/shots/2764085-Do-you-even-npm-install", target="_blank") 
-        img(alt="Do you even npm install?" src="https://d13yacurqjgara.cloudfront.net/users/933589/screenshots/2764085/do-you-even-npm2_1x.png")
-
-      li.col-lg-4.col-sm-6: a(href="  https://dribbble.com/shots/3141583-Like-A-Boss", target="_blank") 
-        img(alt="Like A Boss" src="https://d13yacurqjgara.cloudfront.net/users/933589/screenshots/3141583/lab-dribbble_1x.png")
-
-footer
-  #footer
-    p.text-lg.bold Want to see more?
-    p
-      | Shoot me an email to get in touch,
-      br
-      | or view more of my work on dribbble/github!
-  
-    .block-lg
-      a.footer-link(href="mailto:aarti.dcruz@gmail.com", target="_blank"): img(src="/assets/img/email.png")
-      a.footer-link(href="http://dribbble.com/aartichokes", target="_blank"): img(src="/assets/img/dribbble.png")
-      a.footer-link(href="http://github.com/aartidcruz/", target="_blank"): img(src="/assets/img/github.png")
-    .divider
-    .block-lg
-      p.text-sm This website was designed and built by me.
-      p.text-sm Copyright &copy; 2018 Aarti D'Cruz. All Rights Reserved.
+  .block-lg
+    a.footer-link(href="mailto:aarti.dcruz@gmail.com", target="_blank"): img(src="/assets/img/email.png")
+    a.footer-link(href="http://dribbble.com/aartichokes", target="_blank"): img(src="/assets/img/dribbble.png")
+    a.footer-link(href="http://github.com/aartidcruz/", target="_blank"): img(src="/assets/img/github.png")
+  .divider
+  .block-lg
+    p.text-sm This website was designed and built by me.
+    p.text-sm Copyright &copy; 2018 Aarti D'Cruz. All Rights Reserved.
