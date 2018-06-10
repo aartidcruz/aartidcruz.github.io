@@ -1,4 +1,5 @@
-include /templates/components/mixins
+include /components/mixins
+include /components/logomark
 
 #intro.section.panel
   .container.table
@@ -14,13 +15,13 @@ include /templates/components/mixins
         
         .text-center.block-top-xl
           .skill
-            img(src="/assets/img/design.svg")
+            img(src="/assets/design.svg")
           .skill
-            img(src="/assets/img/code.svg")
+            img(src="/assets/code.svg")
           .skill
-            img(src="/assets/img/motion.svg")
+            img(src="/assets/motion.svg")
           .skill
-            img(src="/assets/img/human.svg")
+            img(src="/assets/human.svg")
                 
 #about-me.section.panel
   .container.table
@@ -31,7 +32,7 @@ include /templates/components/mixins
           p.text-md
             | I’m a digital/product designer + front end web dev who lives in London. 
             | Currently I'm working at 
-            a(href="https://www.airtasker.com/" target="_blank") Airtasker 
+            a(href="https://www.airtasker.co.uk/" target="_blank") Airtasker 
             | as a Designer and CSS tinkerer. With my 4 years of experience 
             | working I’ve had the opportunity to learn how to create beautiful 
             | and practical interfaces, as well as coding with radtastic languages 
@@ -46,8 +47,7 @@ include /templates/components/mixins
   "airtasker-ikea.jpg",
   "desktop",
   "Product + Brand + Kiosk design",
-  "/airtasker-ikea",
-  "View Project")
+  "/airtasker-ikea")
   
 +workTile(
   "Aircon",
@@ -55,26 +55,23 @@ include /templates/components/mixins
   "aircon.jpg",
   "desktop",
   "Logo design",
-  "/aircon",
-  "View Project")
+  "/aircon")
   
 +workTile(
-  "Airtasker | Product",
+  "Airtasker ⃓ Product",
   "Airtasker provided an assembly service for IKEA customers. This project needed a custom Airtasker post task flow that would be used in store on ipads at Airtasker kiosks.",
   "airtasker-product.jpg",
   "desktop",
   "Product + Brand + Kiosk design",
-  "/airtasker-product",
-  "View Project")
+  "/airtasker-product")
   
 +workTile(
-  "Airtasker | Brand",
+  "Airtasker ⃓ Brand",
   "Airtasker provided an assembly service for IKEA customers. This project needed a custom Airtasker post task flow that would be used in store on ipads at Airtasker kiosks.",
   "airtasker-brand.jpg",
   "desktop",
   "Product + Brand + Kiosk design",
-  "/airtasker-brand",
-  "View Project")
+  "/airtasker-product")
     
 +workTile("Network Ten Media Website", "This site was created for Network Ten, "+
 "the brief was to re-design their internal media website and make it more user friendly. "+
@@ -84,8 +81,7 @@ include /templates/components/mixins
 "ten.png", 
 "desktop",
 "Front-end",
-"http://networktenmedia.com.au/",
-"View Live"
+"http://networktenmedia.com.au/"
 )
 
 +workTile("Lamb Roast", "Lamb Roast is a timer App that was build for the Meat "+ 
@@ -106,8 +102,7 @@ include /templates/components/mixins
 "steakmatejapan.png",
 "mobile",
 "Front-end + Design + UX + Animation",
-"https://itunes.apple.com/jp/app/babimeito/id909283176?l=en&mt=8",
-"Download from the App Store")
+"https://itunes.apple.com/jp/app/babimeito/id909283176?l=en&mt=8")
   video.work-mobile(src="/assets/work/steakmate-animation.mp4" autoplay loop)
   
 .block-grey.panel.section.works.dribbble-works

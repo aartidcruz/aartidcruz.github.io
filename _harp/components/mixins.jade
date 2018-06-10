@@ -1,4 +1,4 @@
-mixin workTile(title, description, work_url, device, tag, live_link, cta)
+mixin workTile(title, description, work_url, device, tag, live_link)
   .panel.section.works
     .container-fluid.block-lg
       .row.section(id=title.replace(/[^\w]|_/g, "").toLowerCase())
@@ -13,6 +13,7 @@ mixin workTile(title, description, work_url, device, tag, live_link, cta)
             h2.text-xl.blue=title
             p=description
             if tag
-              h3.subtitle=tag
+              h3.work-category=tag
               
-            a.btn(href="#{live_link}", target="_blank") #{cta}
+            if live_link
+              a.btn(href="#{live_link}", target="_blank") View project
