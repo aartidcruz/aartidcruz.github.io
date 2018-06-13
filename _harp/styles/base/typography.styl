@@ -82,8 +82,18 @@ hr
 // Links
 a
   color $pink
-  text-decoration none
   transition(400ms)
-  &:hover
-    color transparentify($pink, .3)
-    text-decoration none
+  text-decoration none
+  &.link-pink,
+  &.link-green
+    display inline-block
+    transform(translateY(0))
+    &:hover
+      text-decoration none 
+      transform(translateY(-1px))
+  &.link-pink
+    &:hover
+      text-shadow 0 3px 7px $pink
+  &.link-green
+    &:hover
+      text-shadow 0 3px 7px $green

@@ -1,8 +1,52 @@
+.nav
+  top 50px
+  left 50%
+  position absolute
+  transform(translateX(-50%))
+.nav-prev,
+.nav-next
+  color $green
+  font-size 20px
+.nav-next
+  padding-left 10px
+  &:after
+    content ''
+    width auto
+    top 1px
+    height 12px
+    padding 0 20px
+    position relative
+    display inline-block
+    transform(rotate(90deg))
+    background-size 100% 100%
+    background-repeat no-repeat
+    background-image url('../assets/breaker.svg')
+.nav-prev
+  padding-right 10px
+  &:before
+    content ''
+    width auto
+    top 1px
+    height 12px
+    padding 0 20px
+    position relative
+    display inline-block
+    transform(rotate(-90deg))
+    background-size 100% 100%
+    background-repeat no-repeat
+    background-image url('../assets/breaker.svg')
+
 .work-project
   .hero
     padding 140px 20px 64px 20px
   .work-section
     padding 64px 20px
+    
+  .page-subtitle
+    max-width 460px
+    text-align center
+    margin 0 auto
+    font-size 1.3em
 
   .subtitle
     color $dark
@@ -13,6 +57,10 @@
 
   .mediumy-image
     max-width 700px
+    width 100%
+  
+  .biggish-image
+    max-width 800px
     width 100%
 
   .biggy-image

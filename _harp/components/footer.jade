@@ -6,9 +6,12 @@
     | or view more of my work on dribbble/github!
 
   .block-lg
-    a.footer-link(href="mailto:aarti.dcruz@gmail.com", target="_blank"): img(src="/assets/img/email.png")
-    a.footer-link(href="http://dribbble.com/aartichokes", target="_blank"): img(src="/assets/img/dribbble.png")
-    a.footer-link(href="http://github.com/aartidcruz/", target="_blank"): img(src="/assets/img/github.png")
+    a.footer-link(href="mailto:aarti.dcruz@gmail.com", target="_blank")
+      include email
+    a.footer-link(href="http://dribbble.com/aartichokes", target="_blank")
+      include dribbble
+    a.footer-link(href="http://github.com/aartidcruz/", target="_blank")
+      include github
   .divider
   .block-lg
     p.text-sm This website was designed and built by me.

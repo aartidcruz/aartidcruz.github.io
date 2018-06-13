@@ -1,3 +1,7 @@
+#intro, #about-me
+  width 100% !important
+  height 100% !important
+  
 #logomark
   width 80px
   top 30px
@@ -21,6 +25,17 @@
   color white
   position relative
   z-index 2
+  
+.about-me-desc
+  position relative
+  padding-left 20px
+  &:before
+    content ''
+    left 0
+    top 4px
+    bottom 11px
+    position absolute
+    border-left 7px solid $pink
 
 @keyframes pulse
   0%

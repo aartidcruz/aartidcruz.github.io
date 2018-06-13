@@ -9,17 +9,17 @@
     transition(all 400ms)
     &:hover
       transform(scale(1.05))
-
-    @media screen and (max-width: $screen-sm-min)
-      img
-        width 50px
-
-  img
-    width 70px
-    margin 0 10px
-
+      
+  .footer-icon
+    width 50px
+    margin 0 5px
+    fill $green
+    transition(all 400ms)
+    &:hover
+      -webkit-filter drop-shadow(4px 10px 7px rgba(44,58,72,0.6))
+    
   .divider
     width 50px
     margin-left auto
     margin-right auto
-    border-top 2px solid rgba(255, 255, 255, 0.5)
+    border-top 6px solid $pink
