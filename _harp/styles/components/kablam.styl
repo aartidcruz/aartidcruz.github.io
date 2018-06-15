@@ -1,3 +1,9 @@
+random(min, max)
+  return floor( math(0, "random") * max + min )
+
+.kablam-swirly
+  transform: translate(random(-500, 500)px, random(-500, 500)px)
+
 .kablam-container
   display block
   position relative
@@ -9,7 +15,6 @@
     position absolute
     transform(translate(-50%, -50%))
     z-index 6
-    
+
   .kablam-swirly
     width 50px
-    

@@ -7,8 +7,10 @@ mixin workTile(title, description, work_url, device, tag, live_link)
             if live_link
               a.kablam-container(href="#{live_link}")
                 img.work(src="/assets/work/#{work_url}" class="work-#{device}")
+                include kablam
                 if block
                   block
+                  
             else
               img.work(src="/assets/work/#{work_url}" class="work-#{device}")
               if block
@@ -23,3 +25,4 @@ mixin workTile(title, description, work_url, device, tag, live_link)
               
             if live_link
               a.btn.link-pink(href="#{live_link}") VIEW PROJECT
+      
