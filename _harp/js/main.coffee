@@ -2,17 +2,18 @@ $(document).ready ->
   $ ->
     position = $(window).scrollTop()
     minScroll = 80
+    maxScroll = 500
 
     $(window).scroll ->
       scroll = $(window).scrollTop()
+      windowHeight = $(window).height()
+      documentHeight = $(document).height()
+
       if (scroll < position) && (position > minScroll)
-        # console.log 'going down'
-        # console.log "scroll:", scroll, "position:", position, minScroll
         $('.nav').addClass 'bottom'
-      else if scroll > 3000
+      else if(scroll + windowHeight > documentHeight - maxScroll)
         $('.nav').addClass 'bottom'
       else
-        # console.log 'moving ON UP'
         $('.nav').removeClass 'bottom'
       position = scroll
       return
