@@ -85,7 +85,8 @@ a
   transition(400ms)
   text-decoration none
   &.link-pink,
-  &.link-green
+  &.link-green,
+  &.link-blue
     display inline-block
     transform(translateY(0))
     &:hover
@@ -95,5 +96,10 @@ a
     &:hover
       text-shadow 0 3px 7px $pink
   &.link-green
+    color $green
     &:hover
       text-shadow 0 3px 7px $green
+  &.link-blue
+    color $blue
+    &:hover
+      text-shadow 0 3px 7px $blue

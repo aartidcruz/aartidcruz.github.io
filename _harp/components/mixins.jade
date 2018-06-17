@@ -1,4 +1,4 @@
-mixin workTile(title, description, work_url, device, tag, live_link)
+mixin workTile(title, description, work_url, klass, tag, live_link)
   .panel.section.works
     .container-fluid.block-lg
       .row.section(id=title.replace(/[^\w]|_/g, "").toLowerCase())
@@ -6,13 +6,13 @@ mixin workTile(title, description, work_url, device, tag, live_link)
           .block-hor-lg.work-img
             if live_link
               a.kablam-container(href="#{live_link}")
-                img.work(src="/assets/work/#{work_url}" class="work-#{device}")
+                img.work(src="/assets/work/#{work_url}" class=klass)
                 include kablam
                 if block
                   block
                   
             else
-              img.work(src="/assets/work/#{work_url}" class="work-#{device}")
+              img.work(src="/assets/work/#{work_url}" class=klass)
               if block
                 block
               

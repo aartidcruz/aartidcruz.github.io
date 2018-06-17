@@ -1,12 +1,22 @@
 $(document).ready ->
-  currentYear = new Date().getFullYear()
-  circles = document.querySelectorAll('.kablam-circle')
-  triangles = document.querySelectorAll('.kablam-a')
-  ds = document.querySelectorAll('.kablam-d')
-  swirlys = document.querySelectorAll('.kablam-swirly')
+  $ ->
+    position = $(window).scrollTop()
+    minScroll = 80
 
-  random = Math.floor(Math.random() * 100);
-
+    $(window).scroll ->
+      scroll = $(window).scrollTop()
+      if (scroll < position) && (position > minScroll)
+        # console.log 'going down'
+        # console.log "scroll:", scroll, "position:", position, minScroll
+        $('.nav').addClass 'bottom'
+      else if scroll > 3000
+        $('.nav').addClass 'bottom'
+      else
+        # console.log 'moving ON UP'
+        $('.nav').removeClass 'bottom'
+      position = scroll
+      return
+    return
 
   if window.innerWidth > 1024
     controller = new (ScrollMagic.Controller)(globalSceneOptions: triggerHook: 'onLeave')
