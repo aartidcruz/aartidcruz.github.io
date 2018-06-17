@@ -84,22 +84,24 @@ a
   color $pink
   transition(400ms)
   text-decoration none
-  &.link-pink,
-  &.link-green,
-  &.link-blue
-    display inline-block
-    transform(translateY(0))
-    &:hover
-      text-decoration none 
-      transform(translateY(-1px))
-  &.link-pink
-    &:hover
-      text-shadow 0 3px 7px $pink
-  &.link-green
-    color $green
-    &:hover
-      text-shadow 0 3px 7px $green
-  &.link-blue
-    color $blue
-    &:hover
-      text-shadow 0 3px 7px $blue
+.link-pink,
+.link-green,
+.link-blue
+  transition(400ms)
+  display inline-block
+  cursor pointer
+  transform(translateY(0))
+  &:hover
+    text-decoration none
+    transform(translateY(-1px))
+.link-pink
+  &:hover
+    text-shadow 0 3px 7px $pink
+.link-green
+  color $green
+  &:hover
+    text-shadow 0 3px 7px $green
+.link-blue
+  color $blue
+  &:hover
+    text-shadow 0 3px 7px $blue
