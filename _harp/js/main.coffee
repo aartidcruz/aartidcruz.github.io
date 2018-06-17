@@ -1,23 +1,28 @@
 $(document).ready ->
-  $ ->
-    position = $(window).scrollTop()
-    minScroll = 80
-    maxScroll = 500
+  console.log("ready")
+  if $("#nav").length > 0
+    console.log("yes navigation mate")
+    $ ->
+      position = $(window).scrollTop()
+      minScroll = 80
+      maxScroll = 500
 
-    $(window).scroll ->
-      scroll = $(window).scrollTop()
-      windowHeight = $(window).height()
-      documentHeight = $(document).height()
+      $(window).scroll ->
+        scroll = $(window).scrollTop()
+        windowHeight = $(window).height()
+        documentHeight = $(document).height()
 
-      if (scroll < position) && (position > minScroll)
-        $('.nav').addClass 'bottom'
-      else if(scroll + windowHeight > documentHeight - maxScroll)
-        $('.nav').addClass 'bottom'
-      else
-        $('.nav').removeClass 'bottom'
-      position = scroll
+        if (scroll < position) && (position > minScroll)
+          $('#nav').addClass 'bottom'
+        else if(scroll + windowHeight > documentHeight - maxScroll)
+          $('#nav').addClass 'bottom'
+        else
+          $('#nav').removeClass 'bottom'
+        position = scroll
+        return
       return
-    return
+  else
+    console.log("no navigation mate")
 
   if window.innerWidth > 1024
     controller = new (ScrollMagic.Controller)(globalSceneOptions: triggerHook: 'onLeave')
