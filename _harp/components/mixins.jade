@@ -5,8 +5,8 @@ mixin workTile(title, description, work_url, klass, tag, live_link)
         .col-xs-12.col-md-7.col-sm-12.section.left.tight
           .block-hor-lg.work-img
             if live_link
-              a.work-link(href="#{live_link}")
-                img.work(src="/assets/work/#{work_url}" class=klass)
+              a(href="#{live_link}")
+                img.work.work-link(src="/assets/work/#{work_url}" class=klass)
                 include kablam
                 if block
                   block
