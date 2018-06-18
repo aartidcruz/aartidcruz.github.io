@@ -14,8 +14,24 @@ $(document).ready ->
     autoplay: false
     path: 'code-icon.json'
 
+  motionAnimData =
+    container: document.getElementById('motion-icon')
+    renderer: 'svg'
+    loop: false
+    autoplay: false
+    path: 'motion-icon.json'
+
+  humanAnimData =
+    container: document.getElementById('human-icon')
+    renderer: 'svg'
+    loop: false
+    autoplay: false
+    path: 'human-icon.json'
+
   designAnim = lottie.loadAnimation(designAnimData)
   codeAnim = lottie.loadAnimation(codeAnimData)
+  motionAnim = lottie.loadAnimation(motionAnimData)
+  humanAnim = lottie.loadAnimation(humanAnimData)
 
   document.getElementById('design-text').addEventListener 'mouseover', ->
     designAnim.play()
@@ -26,6 +42,16 @@ $(document).ready ->
     codeAnim.play()
   document.getElementById('code-text').addEventListener 'mouseout', ->
     codeAnim.stop()
+
+  document.getElementById('motion-text').addEventListener 'mouseover', ->
+    motionAnim.play()
+  document.getElementById('motion-text').addEventListener 'mouseout', ->
+    motionAnim.stop()
+
+  document.getElementById('human-text').addEventListener 'mouseover', ->
+    humanAnim.play()
+  document.getElementById('human-text').addEventListener 'mouseout', ->
+    humanAnim.stop()
 
   if $("#nav-bottom").length > 0
     console.log("yes navigation mate")
