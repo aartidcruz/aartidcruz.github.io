@@ -5,7 +5,7 @@ mixin workTile(title, description, work_url, klass, tag, live_link)
         .col-xs-12.col-md-7.col-sm-12.section.left.tight
           .block-hor-lg.work-img
             if live_link
-              a(href="#{live_link}")
+              a(href="/projects/#{live_link}")
                 img.work.work-link(src="/assets/work/#{work_url}" class=klass)
                 if block
                   block
@@ -23,5 +23,5 @@ mixin workTile(title, description, work_url, klass, tag, live_link)
               h3.work-category=tag
               
             if live_link
-              a.btn.link-pink(href="#{live_link}") VIEW PROJECT
+              a.btn.link-pink(href="/projects/#{live_link}") VIEW PROJECT
       
