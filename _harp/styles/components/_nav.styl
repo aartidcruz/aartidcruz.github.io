@@ -1,0 +1,67 @@
+#nav-top
+  top 50px
+  left 50%
+  position absolute
+  transform(translateX(-50%))
+
+#nav-bottom
+  left 50%
+  bottom 50px
+  z-index 5
+  position fixed
+  transform(translateX(-50%))
+  filter(drop-shadow(0px 20px 20px rgba(44,58,72,0.34)))
+  .nav-prev
+    transform(translateX(-70px))
+  .nav-next
+    transform(translateX(70px))
+  .nav-prev,
+  .nav-next
+    opacity 0
+    margin 0 5px
+    background white
+    border-radius 6px
+    pointer-events none
+    transition(500ms)
+    color $blue
+    display inline-block
+  &.show
+    .nav-prev,
+    .nav-next
+      opacity 1
+      pointer-events all
+      transform(translateX(0))
+      &:hover
+        transform(scale(1.05),translateX(0))
+
+.nav-prev,
+.nav-next
+  font-size 20px
+.nav-next
+  padding-left 10px
+  &:after
+    content ''
+    width auto
+    top 1px
+    height 12px
+    padding 0 20px
+    position relative
+    display inline-block
+    transform(rotate(90deg))
+    background-size 100% 100%
+    background-repeat no-repeat
+    background-image url('../assets/breaker.svg')
+.nav-prev
+  padding-right 10px
+  &:before
+    content ''
+    width auto
+    top 1px
+    height 12px
+    padding 0 20px
+    position relative
+    display inline-block
+    transform(rotate(-90deg))
+    background-size 100% 100%
+    background-repeat no-repeat
+    background-image url('../assets/breaker.svg')

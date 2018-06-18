@@ -1,0 +1,220 @@
+#intro, #about-me
+  width 100% !important
+  height 100% !important
+
+#logomark
+  width 80px
+  top 30px
+  right 40px
+  z-index 99
+  position fixed
+  filter(drop-shadow(6px 12px 7px rgba(44,58,72,0.34)))
+  &:hover
+    .path-a
+      transform(rotate(-25deg))
+    .path-d
+      transform(rotate(15deg))
+  .path-a,
+  .path-d
+    transition(400ms)
+  &.scrolling
+    width 40px
+
+#about-me
+  background $blue
+  color white
+  position relative
+  z-index 2
+
+.about-me-desc
+  position relative
+  padding-left 20px
+  &:before
+    content ''
+    left 0
+    top 4px
+    bottom 11px
+    position absolute
+    border-left 7px solid $pink
+
+@keyframes pulse
+  0%
+    transform(translate(-30%, 0%))
+  100%
+    transform(translate(-30%, 5%))
+
+@keyframes pulseMobile
+  0%
+    transform(translate(-40%, 15%))
+  100%
+    transform(translate(-40%, 20%))
+
+.works,
+#footer
+  z-index 3
+
+#footer
+  position relative
+
+.dribbble-shot
+  padding 5px
+  overflow hidden
+  max-height 260px
+
+.works
+  background white
+  .work-category
+    color $blue
+    font-size 18px
+    padding-bottom 20px
+  .btn
+    font-size 12px
+    font-family $bold
+    &:after
+      content ''
+      width 13px
+      height 13px
+      margin -2px 10px
+      display inline-block
+      background-size 100% 100%
+      background-repeat no-repeat
+      transform(0, 0)
+      background-image url('../assets/arrow-right.svg')
+    &:hover
+      &:after
+        animation pulse
+        animation-duration 1500ms
+        animation-iteration-count infinite
+        animation-timing-function ease-in-out
+
+.work-img
+  height auto
+
+.work
+  border-radius 4px
+  box-shadow(0px 20px 70px 0px rgba(44,58,72,0.34))
+  &.work-link
+    transition(400ms)
+    &:hover
+      transform scale(1.03) rotate(0.5deg)
+  &.svg
+    box-shadow(none)
+    filter(drop-shadow(0px 20px 20px rgba(44,58,72,0.34)))
+
+#steakmatejapan
+  .work-mobile
+    width 50%
+    padding 5px
+    max-width 350px
+    border-radius 8px
+    box-shadow(none)
+    box-sizing border-box
+    display inline-block
+    filter(drop-shadow(0px 20px 20px rgba(44,58,72,0.34)))
+
+#lambroast
+  .work
+    width 590px
+    max-width 100%
+
+@keyframes moveUp
+  0%
+    transform(translate(0, 0))
+  50%
+    transform(translate(0, 10px))
+  100%
+    transform(translate(0, 0))
+
+
+@keyframes pulse
+  0%
+    transform(translate(0, 0))
+  50%
+    transform(translate(6px, 0))
+  100%
+    transform(translate(0, 0))
+
+@keyframes dash
+  0%
+    transform(translate(-100%, 0))
+  50%
+    transform(translate(0, 0))
+  99%
+    transform(translate(0.9px, 0))
+  100%
+    transform(translate(0, 0))
+
+@media screen and (max-height: 768px) and (min-width $screen-md-min)
+  .work
+    height 100%
+  #steakmatejapan
+    .work-mobile
+      width 50% !important
+      max-width 300px
+
+  #lambroast
+    .work
+      width auto !important
+      max-width 500px !important
+
+
+@media screen and (max-height: 600px)
+  #lambroast
+    .work
+      width auto !important
+      max-width 400px !important
+  #steakmatejapan
+    .work-mobile
+      width 50% !important
+      max-width 250px
+
+  #networktenmediawebsite,
+  #edappcom
+    .work
+      max-height 100%
+
+
+@media screen and (min-width: 1025px)
+  .works
+    .work-img,
+    .work-desc
+      opacity 0
+      transition(all 400ms)
+      transition-delay 0ms !important
+      position relative
+      top 50%
+      left 50%
+    .work-img
+      transform(translate(-60%, -50%))
+    .work-desc
+      transform(translate(-40%, -50%))
+
+  .works
+    &.active
+      .work-img,
+      .work-desc
+        opacity 1
+        transform(translate(-50%, -50%))
+
+#intro
+  .skill,
+  .title,
+  .about-me-desc
+    opacity 0
+    transition(all 400ms)
+  .title
+    transform(translate(-100px, 0))
+  .skill
+    display inline-block
+    max-width 150px
+    margin 0 10px
+    img
+      width 100%
+      height auto
+  .about-me-desc,
+  .title,
+  .skill
+    opacity 1
+    transition-delay 900ms
+    transition(opacity 400ms)
+    transform(translate(0, 0))

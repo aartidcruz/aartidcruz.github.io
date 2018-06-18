@@ -1,0 +1,88 @@
+random(min, max)
+  return floor( math(0, "random") * max + min )
+
+@keyframes fadeOut
+  0%
+    opacity 1
+  100%
+    opacity 0
+    
+.kablam-container
+  display block
+  position relative
+  
+.kablam
+  svg
+    left 50%
+    top 50%
+    width 20px
+    position absolute
+    transform(translate(-50%, -50%))
+    transition(400ms)
+    z-index -1
+
+  .kablam-swirly
+    width 50px
+  
+  .kablam-swirly-1,
+  .kablam-circle-1,
+  .kablam-d-1,
+  .kablam-a-1
+    fill $green
+    
+  .kablam-swirly-2,
+  .kablam-circle-2,
+  .kablam-d-2,
+  .kablam-a-2
+    fill $pink
+    
+  .kablam-swirly-3,
+  .kablam-circle-3,
+  .kablam-d-3,
+  .kablam-a-3
+    fill $blue
+    
+  .kablam-swirly-4,
+  .kablam-circle-4,
+  .kablam-d-4,
+  .kablam-a-4
+    fill $pink
+  
+.kablam-container:hover
+
+  .kablam-swirly-1
+    transform: translate(280px, random(-280, 280)px)
+  .kablam-swirly-2
+    transform: translate(random(-280, 280)px, random(-280, 280)px)
+  .kablam-swirly-3
+    transform: translate(280px, random(-280, 280)px)
+  .kablam-swirly-4
+    transform: translate(random(-280, 280)px, random(-280, 280)px)
+    
+  .kablam-circle-1
+    transform: translate(280px, random(-280, 280)px)
+  .kablam-circle-2
+    transform: translate(random(-280, 280)px, random(-280, 280)px)
+  .kablam-circle-3
+    transform: translate(280px, random(-280, 280)px)
+  .kablam-circle-4
+    transform: translate(random(-280, 280)px, random(-280, 280)px)
+    
+  .kablam-d-1
+    transform: translate(280px, random(-280, 280)px)
+  .kablam-d-2
+    transform: translate(random(-280, 280)px, random(-280, 280)px)
+  .kablam-d-3
+    transform: translate(280px, random(-280, 280)px)
+  .kablam-d-4
+    transform: translate(random(-280, 280)px, random(-280, 280)px)
+    
+  .kablam-a-1
+    transform: translate(280px, random(-280, 280)px)
+  .kablam-a-2
+    transform: translate(random(-280, 280)px, random(-280, 280)px)
+  .kablam-a-3
+    transform: translate(280px, random(-280, 280)px)
+  .kablam-a-4
+    transform: translate(random(-280, 280)px, random(-280, 280)px)
+

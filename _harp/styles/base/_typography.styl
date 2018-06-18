@@ -1,0 +1,107 @@
+// Alignment
+.text-left
+  text-align left
+.text-right
+  text-align right
+.text-center
+  text-align center
+.text-justify
+  text-align justify
+
+.text-inline
+  display inline
+
+// Wrapping
+.text-nowrap
+  white-space nowrap
+.text-pre
+  white-space pre-line
+.text-ellipsis
+  text-overflow ellipsis
+  white-space nowrap
+  overflow hidden
+
+// Weight
+h1, h2, h3, h4
+  line-height: 1.2em
+
+h1, h2
+  font-family 'BrandonGrotesqueWeb-Black'
+
+// Size
+h1, .text-xxl
+  font-size 4em
+  @media screen and (max-width: $screen-md-min)
+    font-size 2.5em !important
+
+h2, .text-xl
+  font-size 3em
+h3, .text-lg
+  font-size 1.5em
+h4, .text-md
+  font-size 1.15em
+h5, .text-sm
+  font-size 0.85em
+
+// Margin and spacing
+h1, h2, h3, h4, h5
+  margin 0
+  font-weight normal
+
+h3
+  font-family $bold
+
+p
+  margin 0 0 0.3em
+
+.tight
+  margin-bottom 0
+
+ul, ol
+  padding-left 1.2em
+
+hr
+  border-width 1px 0 0 0
+  width 100%
+
+// Transformation
+.text-lowercase
+  text-transform lowercase
+.text-uppercase
+  text-transform uppercase
+.text-capitalize
+  text-transform capitalize
+.text-normal-case
+  text-transform none !important
+
+
+// Colours
+.blue
+  color $blue
+
+// Links
+a
+  color $pink
+  transition(400ms)
+  text-decoration none
+.link-pink,
+.link-green,
+.link-blue
+  transition(400ms)
+  display inline-block
+  cursor pointer
+  transform(translateY(0))
+  &:hover
+    text-decoration none
+    transform(translateY(-1px))
+.link-pink
+  &:hover
+    text-shadow 0 3px 7px $pink
+.link-green
+  color $green
+  &:hover
+    text-shadow 0 3px 7px $green
+.link-blue
+  color $blue
+  &:hover
+    text-shadow 0 3px 7px $blue
