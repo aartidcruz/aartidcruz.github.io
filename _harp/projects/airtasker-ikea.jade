@@ -10,13 +10,16 @@ include /components/_nav
         .col-sm-12.block-lg
           h1 Airtasker + IKEA
           p.subtitle.text-lg
-            | Airtasker provided an assembly service for IKEA customers. 
-            | This project needed a custom Airtasker post task flow that would 
-            | be used in store on ipads at Airtasker kiosks.
+            | Airtasker did a trial assembly service for IKEA customers. 
+            | We needed a solution that enabled shoppers in the IKEA store to 
+            | easily post a task on the Airtasker platform. The solution had to 
+            | be simple enough that they could leave the store with all the 
+            | knowledge they needed to get their furniture assembled.
 
           p.breaker Product design
-          p.breaker Brand design
+          p.breaker T-shirt design
           p.breaker Kiosk design
+          p.breaker Coupons and flyers
 
   .biggy-image.kiosk-1
   img.mediumy-image.block-ver-xl(src="/assets/airtasker-ikea/shirts.png")
@@ -32,8 +35,68 @@ include /components/_nav
   .biggy-image.kiosk-3
   
   .block-xl
-    h3.blue Product flow
-    a.link-pink.block-ver-md(href="/" target="_blank") View on invision
-    img.mediumy-image.shadow.img-block(src="/assets/airtasker-ikea/ipad.png")
+    h2.blue Get it assembled - The challenge
+    
+    .block-ver-lg
+      h3.blue.block-ver-md Our goals
+      .container-sm.text-left
+        p.text-md.block-ver-md.breaker-point How can we provide a user friendly experience for IKEA shoppers to quickly get their assembly done on Airtasker?
+        p.text-md.block-ver-md.breaker-point How do we build trust in Airtasker for IKEA shoppers?
+        p.text-md.block-ver-md.breaker-point How do we educate new users about getting furniture assembled on Airtasker?
+      
+  .block-lg
+    h3.blue.block-ver-md The designs
+    h2.blue
+    img.mediumy-image.shadow.img-block.block-ver-lg(src="/assets/airtasker-ikea/ipad.png")
+    .container-fluid
+      .row.block-ver-xl
+        p.subtitle.block-ver-lg Suburb selection
+        .col-sm-6
+          img.shadow(src="/assets/airtasker-ikea/1.png")
+        .col-sm-6
+          img.shadow(src="/assets/airtasker-ikea/2.png")
+      .row.block-ver-xl
+        p.subtitle.block-ver-lg IKEA product search
+        .col-sm-6
+          img.shadow(src="/assets/airtasker-ikea/3.png")
+        .col-sm-6
+          img.shadow(src="/assets/airtasker-ikea/4.png")
+      .row.block-ver-xl
+        p.subtitle.block-ver-lg Signup
+        .col-sm-6
+          img.shadow(src="/assets/airtasker-ikea/5.png")
+        .col-sm-6
+          img.shadow(src="/assets/airtasker-ikea/5.2.png")
+      .row.block-ver-xl
+        p.subtitle.block-ver-lg Task title and details
+        .col-sm-6
+          img.shadow(src="/assets/airtasker-ikea/6.png")
+        .col-sm-6
+          img.shadow(src="/assets/airtasker-ikea/7.png")
+      .row.block-ver-xl
+        p.subtitle.block-ver-lg Budget and location
+        .col-sm-6
+          img.shadow(src="/assets/airtasker-ikea/8.png")
+        .col-sm-6
+          img.shadow(src="/assets/airtasker-ikea/9.png")
+      .row.block-ver-xl
+        p.subtitle.block-ver-lg Confirmation
+        .col-sm-3
+        .col-sm-6
+          img.shadow(src="/assets/airtasker-ikea/10.png")
+        .col-sm-3
+
+    
+  .block-xl
+    h3.blue.block-ver-md Learnings after launch and improvements
+    .container-sm.text-left.block-ver-lg
+      p.blue Product flow:
+      p.text-md.block-ver-md.breaker-point Needed to provide more education about what happens after the user posts a task - as shoppers left the store expecting everything was handled
+      p.text-md.block-ver-md.breaker-point Although initially we tried to keep the flow similar to our regular post task form, we had to simplify the flow to make it faster while in store and make the UI larger for ipad use
+      p.text-md.block-ver-md.breaker-point We started to give coupons out as well as flyers with more details so shoppers could handle the task themselves after they left the store
+      p.blue Kiosk:
+      p.text-md.block-ver-md.breaker-point The inital kiosk designs were a lot more branded and displayed "how it works" copy. We found that because there was too much text on them - shoppers were skimming over the kiosks and not noticing they could get assembly done
+      p.text-md.block-ver-md.breaker-point We therefore simplified the kiosks - removed a lot of copy and updated the colours to standout from the surroundings
+      
 
 include /components/_footer
