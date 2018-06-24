@@ -37,6 +37,23 @@
     position absolute
     border-left 7px solid $pink
 
+.work-link
+  display inline-block
+  cursor pointer
+
+.work-desc
+  &:hover
+    .btn
+      &:after
+        animation pulse
+        animation-duration 1500ms
+        animation-iteration-count infinite
+        animation-timing-function ease-in-out
+    .link-pink
+      text-decoration none
+      transform(translateY(-1px))
+      text-shadow 0 3px 7px $pink
+
 @keyframes pulse
   0%
     transform(translate(-30%, 0%))
@@ -80,14 +97,8 @@
       background-repeat no-repeat
       transform(0, 0)
       background-image url('../assets/arrow-right.svg')
-    &:hover
-      &:after
-        animation pulse
-        animation-duration 1500ms
-        animation-iteration-count infinite
-        animation-timing-function ease-in-out
 
-.work-img
+.work-img-container
   height auto
 
 .work
@@ -124,7 +135,6 @@
     transform(translate(0, 10px))
   100%
     transform(translate(0, 0))
-
 
 @keyframes pulse
   0%
@@ -176,7 +186,7 @@
 
 @media screen and (min-width: 1025px)
   .works
-    .work-img,
+    .work-img-container,
     .work-desc
       opacity 0
       transition(all 400ms)
@@ -184,14 +194,14 @@
       position relative
       top 50%
       left 50%
-    .work-img
+    .work-img-container
       transform(translate(-60%, -50%))
     .work-desc
       transform(translate(-40%, -50%))
 
   .works
     &.active
-      .work-img,
+      .work-img-container,
       .work-desc
         opacity 1
         transform(translate(-50%, -50%))

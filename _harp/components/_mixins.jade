@@ -2,26 +2,33 @@ mixin workTile(title, description, work_url, klass, tag, live_link)
   .panel.section.works
     .container-fluid.block-lg
       .row.section(id=title.replace(/[^\w]|_/g, "").toLowerCase())
-        .col-xs-12.col-md-7.col-sm-12.section.left.tight
-          .block-hor-lg.work-img
-            if live_link
-              a(href="/projects/#{live_link}")
-                img.work.work-link(src="/assets/work/#{work_url}" class=klass)
-                if block
-                  block
-                  
-            else
+        if live_link
+          a.col-xs-12.col-md-7.col-sm-12.section.left.tight(href="/projects/#{live_link}")
+            .block-hor-lg.work-img-container
+              img.work.work-link(src="/assets/work/#{work_url}" class=klass)
+              if block
+                block
+                
+          a.col-xs-12.col-md-5.col-sm-12.section.text-left.right.tight(href="/projects/#{live_link}")
+            .block-lg.work-desc
+              h2.text-xl.blue=title
+              p.dark=description
+              if tag
+                h3.work-category=tag
+              .btn.link-pink VIEW PROJECT
+              
+        else 
+          .col-xs-12.col-md-7.col-sm-12.section.left.tight(href="/projects/#{live_link}")
+            .block-hor-lg.work-img-container
               img.work(src="/assets/work/#{work_url}" class=klass)
               if block
                 block
-              
-        .col-xs-12.col-md-5.col-sm-12.section.text-left.right.tight
-          .block-lg.work-desc
-            h2.text-xl.blue=title
-            p=description
-            if tag
-              h3.work-category=tag
-              
-            if live_link
-              a.btn.link-pink(href="/projects/#{live_link}") VIEW PROJECT
+                
+          .col-xs-12.col-md-5.col-sm-12.section.text-left.right.tight(href="/projects/#{live_link}")
+            .block-lg.work-desc
+              h2.text-xl.blue=title
+              p.dark=description
+              if tag
+                h3.work-category=tag
+        
       
