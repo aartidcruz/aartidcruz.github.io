@@ -215,9 +215,13 @@
   .title
     transform(translate(-100px, 0))
   .skill
+    cursor pointer
     display inline-block
     max-width 150px
     margin 0 10px
+    &:hover
+      transition(400ms)
+      filter(drop-shadow(4px 10px 4px rgba(44,58,72,0.2)))
     img
       width 100%
       height auto

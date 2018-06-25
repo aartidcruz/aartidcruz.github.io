@@ -64,26 +64,117 @@ $(document).ready ->
     motionAnim = lottie.loadAnimation(motionAnimData)
     humanAnim = lottie.loadAnimation(humanAnimData)
 
-    document.getElementById('design-text').addEventListener 'mouseover', ->
+    code_first_click = true
+    document.getElementById('code-icon').onclick = ->
+      if code_first_click
+        code_first_click = false
+        codeAnim.play()
+      else
+        codeAnim.stop()
+        codeAnim.play()
+        code_first_click = false
+      return
+
+    design_first_click = true
+    document.getElementById('design-icon').onclick = ->
+      if design_first_click
+        design_first_click = false
+        designAnim.play()
+      else
+        designAnim.stop()
+        designAnim.play()
+        design_first_click = false
+      return
+
+    motion_first_click = true
+    document.getElementById('motion-icon').onclick = ->
+      if motion_first_click
+        motion_first_click = false
+        motionAnim.play()
+      else
+        motionAnim.stop()
+        motionAnim.play()
+        motion_first_click = false
+      return
+
+    human_first_click = true
+    document.getElementById('human-icon').onclick = ->
+      if human_first_click
+        human_first_click = false
+        humanAnim.play()
+      else
+        humanAnim.stop()
+        humanAnim.play()
+        human_first_click = false
+      return
+
+    code_first_click = true
+    document.getElementById('code-text').onclick = ->
+      if code_first_click
+        code_first_click = false
+        codeAnim.play()
+      else
+        codeAnim.stop()
+        codeAnim.play()
+        code_first_click = false
+      return
+
+    design_first_click = true
+    document.getElementById('design-text').onclick = ->
+      if design_first_click
+        design_first_click = false
+        designAnim.play()
+      else
+        designAnim.stop()
+        designAnim.play()
+        design_first_click = false
+      return
+
+    motion_first_click = true
+    document.getElementById('motion-text').onclick = ->
+      if motion_first_click
+        motion_first_click = false
+        motionAnim.play()
+      else
+        motionAnim.stop()
+        motionAnim.play()
+        motion_first_click = false
+      return
+
+    human_first_click = true
+    document.getElementById('human-text').onclick = ->
+      if human_first_click
+        human_first_click = false
+        humanAnim.play()
+      else
+        humanAnim.stop()
+        humanAnim.play()
+        human_first_click = false
+      return
+
+    setTimeout (->
       designAnim.play()
-    document.getElementById('design-text').addEventListener 'mouseout', ->
-      designAnim.stop()
+      return
+    ), 300
+    design_first_click = false
 
-    document.getElementById('code-text').addEventListener 'mouseover', ->
+    setTimeout (->
       codeAnim.play()
-    document.getElementById('code-text').addEventListener 'mouseout', ->
-      codeAnim.stop()
+      return
+    ), 2000
+    code_first_click = false
 
-    document.getElementById('motion-text').addEventListener 'mouseover', ->
+    setTimeout (->
       motionAnim.play()
-    document.getElementById('motion-text').addEventListener 'mouseout', ->
-      motionAnim.stop()
+      return
+    ), 4000
+    motion_first_click = false
 
-    document.getElementById('human-text').addEventListener 'mouseover', ->
+    setTimeout (->
       humanAnim.play()
-    document.getElementById('human-text').addEventListener 'mouseout', ->
-      humanAnim.stop()
-
+      return
+    ), 6000
+    human_first_click = false
 
   # Scrollmagic on homepage
   homePage = document.getElementById('intro')
