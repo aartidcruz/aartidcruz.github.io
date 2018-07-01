@@ -70,9 +70,9 @@ $(document).ready ->
         code_first_click = false
         codeAnim.play()
       else
+        code_first_click = false
         codeAnim.stop()
         codeAnim.play()
-        code_first_click = true
       return
 
     design_first_click = true
@@ -81,9 +81,9 @@ $(document).ready ->
         design_first_click = false
         designAnim.play()
       else
+        code_first_click = false
         designAnim.stop()
         designAnim.play()
-        design_first_click = true
       return
 
     motion_first_click = true
@@ -92,9 +92,9 @@ $(document).ready ->
         motion_first_click = false
         motionAnim.play()
       else
+        code_first_click = false
         motionAnim.stop()
         motionAnim.play()
-        motion_first_click = true
       return
 
     human_first_click = true
@@ -103,9 +103,9 @@ $(document).ready ->
         human_first_click = false
         humanAnim.play()
       else
+        code_first_click = false
         humanAnim.stop()
         humanAnim.play()
-        human_first_click = true
       return
 
     document.getElementById('design-text').addEventListener 'mouseover', ->
