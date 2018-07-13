@@ -73,11 +73,6 @@
 #footer
   position relative
 
-.dribbble-shot
-  padding 5px
-  overflow hidden
-  max-height 260px
-
 .works
   background white
   .work-category
@@ -207,28 +202,11 @@
         transform(translate(-50%, -50%))
 
 #intro
-  .skill,
-  .title,
-  .about-me-desc
-    opacity 0
-    transition(all 400ms)
-  .title
-    transform(translate(-100px, 0))
   .skill
     cursor pointer
+    transition(400ms)
     display inline-block
     max-width 150px
     margin 0 10px
     &:hover
-      transition(400ms)
       filter(drop-shadow(4px 10px 4px rgba(44,58,72,0.2)))
-    img
-      width 100%
-      height auto
-  .about-me-desc,
-  .title,
-  .skill
-    opacity 1
-    transition-delay 900ms
-    transition(opacity 400ms)
-    transform(translate(0, 0))
