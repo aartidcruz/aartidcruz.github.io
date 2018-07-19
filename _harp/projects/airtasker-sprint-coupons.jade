@@ -10,14 +10,14 @@ include /components/_nav
         .col-sm-12.block-lg
           h1 Airtasker  ⃓ Sprinting (Coupons)
           p.subtitle.text-lg
-            | We conducted our first sprint in the UK, the global team came over from Australia and we sat down to discuss what what were the painpoints we were facing after launch in the UK. My role was to support our UX researcher and provide prototypes.
+            | We conducted our first sprint in the UK, the global team came over from Australia and we sat down to discuss what what were the pain points we were facing after launch in the UK. My role was to support our UX researcher and provide prototypes.
           p.breaker Product design
           p.breaker Research
 
   h3.blue.block-ver-md The problem
   .container-sm.text-left
     p.text-md.block-ver-md.breaker-point Why weren’t our coupons being used?
-    p.text-md.block-ver-md.breaker-point What were the painpoints our users were experienceing during our coupon flow?
+    p.text-md.block-ver-md.breaker-point What were the painpoints our users were experiencing during our coupon flow?
 
   .block-xl
     h3.blue The current solution
@@ -42,8 +42,54 @@ include /components/_nav
   
   .block-xl
     h3.blue Iterations
-    p.page-subtitle I tried a few versions trying to satisfy our how might we’s - which we then tested again on our users
-    img.bigger-image.block-lg(src="/assets/airtasker-sprint-coupons/research.png")
+    p.page-subtitle I tried a few versions trying to satisfy our how might we’s - we did a few variations which we continued to test
     
+    p.text-md.blue.block-ver-xl.page-subtitle Add the coupon before posting a task and showing reminders that you have a coupon
+    .container-fluid
+      .row
+        .col-sm-6.block-lg
+          img.smol-image.shadow(src="/assets/airtasker-sprint-coupons/iteration1-1.jpg")
+        .col-sm-6.block-lg
+          img.smol-image.shadow(src="/assets/airtasker-sprint-coupons/iteration1-2.jpg")
+      .row
+        .col-sm-3.block-lg
+        .col-sm-6.block-lg
+          img.smol-image.shadow(src="/assets/airtasker-sprint-coupons/iteration1-3.jpg")
+        .col-sm-3.block-lg
         
+    .container-sm.text-left
+      .block-ver-lg
+        p.text-md.blue.block-ver-lg What worked
+        p.text-md.block-ver-md.breaker-point Starting the flow with a coupon was reassuring to the user - eliminating the question of when they would use it
+        
+      .block-ver-lg
+        p.text-md.blue.block-ver-lg What didn't work
+        p.text-md.block-ver-md.breaker-point Ended up unnecessarily reminding them of the coupon - it was preventing some from moving through the post task flow easily
+        p.text-md.block-ver-md.breaker-point Adding the “-£10” of the coupon value to the task price confused everyone
+
+    p.text-md.blue.block-ver-xl.page-subtitle Making “add coupon” visible before payment details - Winner!
+    .container-fluid
+      .row
+        .col-sm-6.block-lg
+          img.smol-image.shadow(src="/assets/airtasker-sprint-coupons/iteration2-1.jpg")
+        .col-sm-6.block-lg
+          img.smol-image.shadow(src="/assets/airtasker-sprint-coupons/iteration2-2.jpg")
+        
+    .container-sm.text-left
+      .block-ver-lg
+        p.text-md.blue.block-ver-lg What worked
+        p.text-md.block-ver-md.breaker-point Surfacing “add coupon” before adding payment details assured our users that their coupon was being used
+        p.text-md.block-ver-md.breaker-point Showing the total price being paid out of their card got rid of confusion on what they were paying for the task
+        
+      .block-ver-lg
+        p.text-md.blue.block-ver-lg What didn't work
+        p.text-md.block-ver-md.breaker-point The coupon was still being used fairly late into the post task flow
+    
+    //- .block-xl
+    //-   h3.blue Next steps
+    //-   .container-sm.text-left
+    //-     p.text-md.block-ver-md.breaker-point Refine UI
+    //-     p.text-md.block-ver-md.breaker-point A/B test new flow against old flow, get some quantitative data
+    //-     p.text-md.block-ver-md.breaker-point Iterate on design based on tests
+
 include /components/_footer
