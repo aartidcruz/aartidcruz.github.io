@@ -21,6 +21,9 @@ $(document).ready ->
         return
       return
 
+  # Get current date
+  document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+
   # Play video on hompage
   steakyVideo = document.getElementById("steaky-video")
   if steakyVideo
