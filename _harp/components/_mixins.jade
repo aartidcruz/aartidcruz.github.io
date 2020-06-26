@@ -1,15 +1,15 @@
-mixin workTile(title, description, work_url, klass, tag, live_link, custom_link)
+mixin workTile(title, description, work_url, klass, tag, project_link, custom_cta, custom_link)
   .panel.section.works
     .container-fluid.block-lg
       .row.section(id=title.replace(/[^\w]|_/g, "").toLowerCase())
-        if live_link
-          a.col-xs-12.col-md-7.col-sm-12.section.left.tight(href="/projects/#{live_link}")
+        if project_link
+          a.col-xs-12.col-md-7.col-sm-12.section.left.tight(href="/projects/#{project_link}")
             .block-hor-lg.work-img-container
               img.work.work-link(src="/assets/work/#{work_url}" class=klass)
               if block
                 block
                 
-          a.col-xs-12.col-md-5.col-sm-12.section.text-left.right.tight(href="/projects/#{live_link}")
+          a.col-xs-12.col-md-5.col-sm-12.section.text-left.right.tight(href="/projects/#{project_link}")
             .block-lg.work-desc
               h2.text-xl.blue=title
               p.dark=description
@@ -17,7 +17,7 @@ mixin workTile(title, description, work_url, klass, tag, live_link, custom_link)
                 h3.work-category=tag
               .btn.link-pink VIEW PROJECT
               
-        else if custom_link && !live_link
+        else if custom_cta && !project_link && !custom_link
           .col-xs-12.col-md-7.col-sm-12.section.left.tight
             .block-hor-lg.work-img-container
               img.work.work-link(src="/assets/work/#{work_url}" class=klass)
@@ -30,16 +30,31 @@ mixin workTile(title, description, work_url, klass, tag, live_link, custom_link)
               p.dark=description
               if tag
                 h3.work-category=tag
-              .btn.link-pink=custom_link
+              .btn.link-pink=custom_cta
+              
+        else if custom_cta && !project_link && custom_link
+          a.col-xs-12.col-md-7.col-sm-12.section.left.tight(href="/projects/#{project_link}", target="_blank")
+            .block-hor-lg.work-img-container
+              img.work.work-link(src="/assets/work/#{work_url}" class=klass)
+              if block
+                block
+                
+          a.col-xs-12.col-md-5.col-sm-12.section.text-left.right.tight(href="#{custom_link}", target="_blank")
+            .block-lg.work-desc.coming-soon
+              h2.text-xl.blue=title
+              p.dark=description
+              if tag
+                h3.work-category=tag
+              .btn.link-pink=custom_cta
               
         else 
-          .col-xs-12.col-md-7.col-sm-12.section.left.tight(href="/projects/#{live_link}")
+          .col-xs-12.col-md-7.col-sm-12.section.left.tight(href="/projects/#{project_link}")
             .block-hor-lg.work-img-container
               img.work(src="/assets/work/#{work_url}" class=klass)
               if block
                 block
                 
-          .col-xs-12.col-md-5.col-sm-12.section.text-left.right.tight(href="/projects/#{live_link}")
+          .col-xs-12.col-md-5.col-sm-12.section.text-left.right.tight(href="/projects/#{project_link}")
             .block-lg.work-desc
               h2.text-xl.blue=title
               p.dark=description
