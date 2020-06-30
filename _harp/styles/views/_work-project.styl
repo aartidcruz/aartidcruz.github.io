@@ -12,7 +12,7 @@
       margin 0.5em 0
 
   .page-subtitle
-    max-width 460px
+    max-width 600px
     text-align center
     margin 0 auto
     font-size 1.3em
@@ -36,6 +36,27 @@
   .breaker
     color $pink
     font-family $bold
+
+  .card
+    background white
+    filter(drop-shadow(0 5px 5px rgba(44,58,72,0.1)))
+    border 1px solid rgba(44,58,72,0.1)
+    border-radius 10px
+    padding 20px
+
+  .green-card
+    background alpha($green, 0.2)
+    padding 20px
+    border-radius 10px
+
+  .emoji
+    @extend .text-xl
+    font-size 2em
+    padding 10px 0
+    margin 0
+
+  .smol-image
+    max-width 400px
 
   .mediumy-image
     max-width 700px
@@ -69,6 +90,8 @@
       background-color #28292D
     &.aircon-2
       background-image url('../assets/aircon/aircon-2.png')
+    &.monzo-1
+      background-image url('../assets/monzo-overdrafts/monzo-overdrafts.jpg')
 
   .aircon-3
     max-width 900px

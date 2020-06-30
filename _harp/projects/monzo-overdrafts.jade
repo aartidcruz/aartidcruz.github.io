@@ -1,0 +1,111 @@
+- var prevURL = "airtasker-browse-tasks"
+- var nextURL = "aircon"
+include /components/_logomark
+include /components/_nav
+
+.work-project
+  .hero
+    .container.table
+      .row.table-cell
+        .col-sm-12.block-lg
+          h1 Monzo — Overdrafts overhaul
+          p.subtitle.text-lg
+            | Due to regulation changes, we had to change the fundamental way our overdraft offering worked at Monzo, and migrate our customer base to a completely new model - all while balancing business needs and making sure our customers were still receiving a great product. 
+          p.breaker Product design lead
+          p.breaker Motion
+          p.breaker Research
+
+  .biggy-image.monzo-1
+  .block-ver-xl
+
+  h3.blue.block-ver-md The problem
+  .container-sm.text-left
+    p.text-md.block-ver-md 
+      | The FCA (Financial conduct authority) implemented new rules for overdrafts to make it easier to compare rates between all UK banks and to make overdraft charges fairer on the customer.
+      | In simplest terms, we had to change our pricing model from an easy to understand fixed fee of 50p a day, to a more complicated interest based model (% APR), this required massive changes to our product and preperation for our customers.
+
+  .block-xl
+    h3.blue.block-ver-md The goals
+    .container-sm.text-left
+      p.text-md.block-ver-md Overdraft charges are already anxiety causing for some customers, keeping this in mind we needed to make sure:
+      p.text-md.block-ver-md.breaker-point 
+        | That our customers had 
+        b.bold enough warning 
+        | about the change, so they could turn off their overdraft if they didn't agree with the new pricing, and also so we were compliant with the new rules
+      p.text-md.block-ver-md.breaker-point 
+        | That we balanced our messaging and execution so that users could 
+        b.bold clearly understand the new charges, 
+        | showcasing that it could be better or worse for you depending how you use your overdraft
+      p.text-md.block-ver-md.breaker-point 
+        | Being 
+        b.bold transparent 
+        | over fees
+      p.text-md.block-ver-md.breaker-point 
+        | Lettings customers know we 
+        b.bold now have higher limits 
+        | to cater for customers who may need to borrow more on the new pricing
+      p.text-md.block-ver-md.breaker-point 
+        | An understandable solution that did 
+        b.bold not increase 
+        |  customer queries
+    
+            
+  .block-xl
+    h3.blue.block-ver-md Initial Research
+    p.page-subtitle 
+      | The FCA had already done some great 
+      a.link-pink(href="https://www.fca.org.uk/publication/research/fca-overdraft-proposals-consumer-research.pdf", target="_blank") customer research 
+      |  into how customers felt about overdrafts across other UK banks, I collated the information to help shape how we could initially tackle this problem, the key themes were:
+    .container-fluid
+      .row
+        .col-sm-4.block-lg
+          .card.block-ver-lg
+            p.emoji 🔍
+            p.text-md Awareness and feelings around overdrafts
+            p.block-ver-md.breaker-point.text-left Few people had engaged with the cost of their overdraft
+            p.block-ver-md.breaker-point.text-left Some see overdrafts as an extension of their account, not as borrowing
+            p.block-ver-md.breaker-point.text-left Few people are reluctant to engage with messages out of anxiety
+            .block-ver-md.text-left.green-card
+              p.bold What can we do?
+              p Make sure it's clear what the cost is, without causing anxiety
+        
+        .col-sm-4.block-lg
+          .card.block-ver-lg
+            p.emoji 📣
+            p.text-md Communication regarding their overdraft
+            p.block-ver-md.breaker-point.text-left People expect bad news and ‘switch off’ when messaged about overdrafts
+            p.block-ver-md.breaker-point.text-left Language isn't clear and understandable
+            p.block-ver-md.breaker-point.text-left A desire for more personal information tailored towards them
+            .block-ver-md.text-left.green-card
+              p.bold What can we do?
+              p Make sure our communication is clear and has a good entry point
+          
+        .col-sm-4.block-lg
+          .card.block-ver-lg
+            p.emoji 💰
+            p.text-md Understanding the cost of an overdraft
+            p.block-ver-md.breaker-point.text-left Charges are complex, difficult to understand
+            p.block-ver-md.breaker-point.text-left Surprised to learn it's different between providers
+            p.block-ver-md.breaker-point.text-left A desire to just know ‘How much will it cost me to use my overdraft?’
+            .block-ver-md.text-left.green-card
+              p.bold What can we do?
+              p Make it easy for customers to understand their usage
+        
+  .block-xl
+    h3.blue.block-ver-md First prototypes and experiments
+    p.page-subtitle 
+      | We launched various experiments to see which entry points performed the best,
+      | which flows had the least drop off so that customers were able to get all 
+      | the information they needed while also having the option to migrate to the new pricing if they wanted. 
+      | We also did some concept testing with staff initially as we couldn't publicly announce the new APR % pricing yet
+
+  .block-xl
+    h3.blue.block-ver-md The solution
+    .container-fluid
+      .row
+        .col-sm-6.block-lg
+          img.smol-image(src="/assets/monzo-overdrafts/apr-final.gif")
+        .col-sm-6.block-lg
+          p.text-md dfgdg s
+
+include /components/_footer
