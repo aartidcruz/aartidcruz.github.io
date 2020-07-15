@@ -24,92 +24,61 @@ include /components/_nav
       | We had noticed a pattern that our customers were currently self managing their overdraft use by changing their limit, this wasn't ideal for them and would sometimes lead to them losing the available credit they relied on. We needed to fix this and we wanted to work on something that was good for our customers, something that we'd seen in research and from talking to them that they would benefit from. 
 
   .block-xl
-    h3.blue.block-ver-md The goals
-    .container-sm.text-left
+    .container-sm
+      h3.blue.block-ver-md The design sprint
+      p.page-subtitle 
+        | I conducted a remote friendly design sprint using 
+        a.link-pink(href="https://whimsical.com/", target="_blank") Whimsical 
+        |  where we mapped out our ideal user journey, asked various experts from user research, 
+        | customer operations, data, and product to form our solution, did rapid sketching, and a final storyboard to shape our solution
+        
+      img.mediumy-image(src="/assets/monzo-usage-goals/whimsical.jpg")
       p.text-md.block-ver-md Our mission statement for our design sprint was:
       
-      p.text-lg.block-ver-md.blue “Monzo overdrafts don't make me feel anxious and I feel in control of my finances, confident in using it, transparent while i'm using it, and it helps me manage it down.”
+      p.text-lg.block-ver-md.blue Monzo overdrafts don't make me feel anxious and I feel in control of my finances, confident in using it, transparent while i'm using it, and it helps me manage it down
       
-      p.text-md.block-ver-md.breaker-point 
-        | That we balanced our messaging and execution so that users could 
-        b.bold clearly understand the new charges, 
-        | showcasing that it could be better or worse for you depending how you use your overdraft
-      p.text-md.block-ver-md.breaker-point 
-        | Being 
-        b.bold transparent 
-        | over fees
-      p.text-md.block-ver-md.breaker-point 
-        | Lettings customers know we 
-        b.bold now have higher limits 
-        | to cater for customers who may need to borrow more on the new pricing
-      p.text-md.block-ver-md.breaker-point 
-        | An understandable solution that did 
-        b.bold not increase 
-        |  customer queries or lose customers who needed their overdraft
-    
+        
             
   .block-xl
-    h3.blue.block-ver-md Initial Research
+    h3.blue.block-ver-md Concept testing results
     p.page-subtitle 
-      | The FCA had already done some great 
-      a.link-pink(href="https://www.fca.org.uk/publication/research/fca-overdraft-proposals-consumer-research.pdf", target="_blanky") customer research 
-      |  into how customers felt about overdrafts across other UK banks, I collated the information to help shape how we could initially tackle this problem, the key themes were:
+      | We concept tested a prototype with our customers after the design sprint to first see if there was a need for usage goals, and if the concept was easily understood, here's what we learnt:
     .container-fluid
       .row
-        .col-sm-4.block-lg
+        .col-sm-3.block-lg
           .card.block-ver-lg
-            p.emoji 🔍
-            p.text-md Awareness and feelings around overdrafts
-            p.block-ver-md.breaker-point.text-left Few people had engaged with the cost of their overdraft
-            p.block-ver-md.breaker-point.text-left Some see overdrafts as an extension of their account, not as borrowing
-            p.block-ver-md.breaker-point.text-left Few people are reluctant to engage with messages out of anxiety
-            .block-ver-md.text-left.green-card
-              p.bold What can we do?
-              p Make sure it's clear what the cost is, without causing anxiety
+            p.emoji 🥅
+            p.text-md People are already trying to self manage mannually in our app which isn't ideal
         
-        .col-sm-4.block-lg
+        .col-sm-3.block-lg
           .card.block-ver-lg
-            p.emoji 📣
-            p.text-md Communication regarding their overdraft
-            p.block-ver-md.breaker-point.text-left People expect bad news and ‘switch off’ when messaged about overdrafts
-            p.block-ver-md.breaker-point.text-left Language isn't clear and understandable
-            p.block-ver-md.breaker-point.text-left A desire for more personal information tailored towards them
-            .block-ver-md.text-left.green-card
-              p.bold What can we do?
-              p Make sure our communication is clear and has a good entry point
+            p.emoji 😄
+            p.text-md Everyone reacted positively and instantly understood the problem it would help them solve
           
-        .col-sm-4.block-lg
+        .col-sm-3.block-lg
+          .card.block-ver-lg
+            p.emoji 📅
+            p.text-md Seeing how many months it would take to clear their overdraft was key for most
+        
+        .col-sm-3.block-lg
           .card.block-ver-lg
             p.emoji 💰
-            p.text-md Understanding the cost of an overdraft
-            p.block-ver-md.breaker-point.text-left Charges are complex, difficult to understand
-            p.block-ver-md.breaker-point.text-left Surprised to learn it's different between providers
-            p.block-ver-md.breaker-point.text-left A desire to just know ‘How much will it cost me to use my overdraft?’
-            .block-ver-md.text-left.green-card
-              p.bold What can we do?
-              p Make it easy for customers to understand their usage
+            p.text-md People's expectations for the functionality of how it would work matched our own
+                          
         
-  .block-xl
-    h3.blue.block-ver-md The design sprint
-    img.mediumy-image(src="/assets/monzo-usage-goals/whimsical.jpg")
-    
-    p.page-subtitle 
-      | We launched various experiments to see which entry points performed the best,
-      | which flows had the least drop off so that customers were able to get all 
-      | the information they needed while also having the option to migrate to the new pricing if they wanted. 
-      | We also did some concept testing with staff initially as we couldn't publicly announce the new APR % pricing yet
 
   .block-xl
     h3.blue The vision
+    p.page-subtitle Key areas and themes that would shape how to help customers use their overdraft less based on our testing results and research
     .container-fluid.block-ver-xl
       .row
         .Aligner
           .Aligner-item
             img.smol-image(src="/assets/monzo-usage-goals/usage-goals-1.png")
           .Aligner-item.aligner-right
-            h3.blue.block-ver-md The winning flow
+            h3.blue.block-ver-md Easy to see time based plan
             p.block-ver-md
-              | After experimenting with different options, this flow had the least drop off, due to only showing the key information, and educating customers through interactions rather than lengthy words
+              | Showing customers a "light at the end of the tunnel" was key in helping understand the concept and feel motivation to actually stick to a plan
     
     .container-fluid.block-ver-xl
       .row
@@ -117,9 +86,9 @@ include /components/_nav
           .Aligner-item
             img.smol-image(src="/assets/monzo-usage-goals/usage-goals-2.png")
           .Aligner-item.aligner-right
-            h3.blue.block-ver-md Understanding the cost of an overdraft
+            h3.blue.block-ver-md Insights into usage
             p.block-ver-md
-              | Customers could always see the cost of their total overdraft before commiting to a limit with an interactive slider
+              | Showing comparisons with their previous usage and insights into how customers use their overdraft will help educate and surface spending behaviours
 
     .container-fluid.block-ver-xl
       .row
@@ -127,9 +96,9 @@ include /components/_nav
           .Aligner-item
             img.smol-image(src="/assets/monzo-usage-goals/usage-goals-3.png")
           .Aligner-item.aligner-right
-            h3.blue.block-ver-md Understanding the cost of an overdraft
+            h3.blue.block-ver-md Encouragement, gamification principles
             p.block-ver-md
-              | Customers could always see the cost of their total overdraft before commiting to a limit with an interactive slider
+              | Using gamification principles, showing milestones, and reward is important with this project
                   
 
 include /components/_footer
