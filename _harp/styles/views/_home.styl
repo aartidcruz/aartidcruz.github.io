@@ -2,18 +2,29 @@
   width 100% !important
   height 100% !important
 
-#logomark
-  width 80px
+#navigation
+  position fixed
   top 30px
   right 40px
   z-index 99
-  position fixed
   filter(drop-shadow(6px 12px 7px rgba(44,58,72,0.34)))
+  .link-pink
+    display block
+    opacity 0
+    cursor none
+    padding 10px
   &:hover
-    .path-a
-      transform(rotate(-25deg))
-    .path-d
-      transform(rotate(15deg))
+    .link-pink
+      opacity 1
+      cursor pointer
+    #logomark
+      .path-a
+        transform(rotate(-25deg))
+      .path-d
+        transform(rotate(15deg))
+        
+#logomark
+  width 80px
   .path-a,
   .path-d
     transition(400ms)
