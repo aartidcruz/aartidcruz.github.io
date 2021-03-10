@@ -3,4 +3,4 @@
 Designed and built be me. &#10047;
 
 
-Copyright &copy; 2020 Aarti D'Cruz. All Rights Reserved.
+Copyright &copy; 2021 Aarti D'Cruz. All Rights Reserved.
